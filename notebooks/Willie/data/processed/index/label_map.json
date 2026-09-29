@@ -1,0 +1,32 @@
+{
+  "classification_classes": [
+    "bg",
+    "diabetic",
+    "no_wound",
+    "pressure",
+    "surgical",
+    "toes",
+    "venous"
+  ],
+  "label_to_id": {
+    "bg": 0,
+    "diabetic": 1,
+    "no_wound": 2,
+    "pressure": 3,
+    "surgical": 4,
+    "toes": 5,
+    "venous": 6
+  },
+  "id_to_label": {
+    "0": "bg",
+    "1": "diabetic",
+    "2": "no_wound",
+    "3": "pressure",
+    "4": "surgical",
+    "5": "toes",
+    "6": "venous"
+  },
+  "notes": [
+    "Union label space across datasets. Missing classes in a dataset are handled during training via label masking."
+  ]
+}

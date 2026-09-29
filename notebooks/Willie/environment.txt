@@ -1,0 +1,48 @@
+# environment.txt — WILLIE
+#
+# This file MUST be generated from the actual `wound` conda environment.
+# Do not hand-write or guess versions — wrong pins break reproduction.
+#
+# "environment.txt" is not a standard, tool-readable format. Prefer ONE of:
+#   requirements.txt  (pip)   ->  pip install -r requirements.txt
+#   environment.yml   (conda) ->  conda env create -f environment.yml
+#
+# ------------------------------------------------------------------
+# GENERATE THE REAL FILE (run inside the wound env, on carya):
+#
+#   conda activate wound
+#
+#   # pip-style (recommended for a public repo; portable):
+#   pip freeze > requirements.txt
+#
+#   # conda-style (drop build hashes so it installs on other machines):
+#   conda env export --no-builds > environment.yml
+#
+#   # capture the exact torch + CUDA build (freeze can hide the CUDA tag):
+#   python -c "import torch; print('torch', torch.__version__, 'cuda', torch.version.cuda)"
+#
+# Then replace everything below this line with the generated output.
+# ------------------------------------------------------------------
+#
+# PLACEHOLDER — NOT REAL VERSIONS. Do not ship as-is.
+#
+# Core packages expected. This is a checklist to sanity-check the freeze,
+# NOT the source of truth. Fill exact versions from pip freeze:
+#
+#   python              = <from env>
+#   torch               = <from env>   # must match the CUDA build used on carya
+#   torchvision         = <from env>
+#   numpy               = <from env>
+#   pandas              = <from env>
+#   scikit-learn        = <from env>
+#   matplotlib          = <from env>
+#   pillow              = <from env>
+#   opencv-python       = <from env>
+#   tqdm                = <from env>
+#   jupyter / ipykernel = <from env>
+#
+# Specialized libraries used by specific notebooks — capture from freeze,
+# I cannot verify their exact names/versions:
+#   - the ViT backbone library
+#   - the detector used in 02_WILLIE_DetectionEngine
+#   - the SAM2 / MedSAM packages used in 05_WILLIE_SAM2_vs_MedSAM

@@ -1,0 +1,235 @@
+image_path,original_class,unified_label,unified_class,source,azh_split
+data/AZH/test/BG/100.jpg,BG,4,no_wound,AZH-azh_test,test
+data/AZH/test/BG/76.jpg,BG,4,no_wound,AZH-azh_test,test
+data/AZH/test/BG/77.jpg,BG,4,no_wound,AZH-azh_test,test
+data/AZH/test/BG/78.jpg,BG,4,no_wound,AZH-azh_test,test
+data/AZH/test/BG/79.jpg,BG,4,no_wound,AZH-azh_test,test
+data/AZH/test/BG/80.jpg,BG,4,no_wound,AZH-azh_test,test
+data/AZH/test/BG/81.jpg,BG,4,no_wound,AZH-azh_test,test
+data/AZH/test/BG/82.jpg,BG,4,no_wound,AZH-azh_test,test
+data/AZH/test/BG/83.jpg,BG,4,no_wound,AZH-azh_test,test
+data/AZH/test/BG/84.jpg,BG,4,no_wound,AZH-azh_test,test
+data/AZH/test/BG/85.jpg,BG,4,no_wound,AZH-azh_test,test
+data/AZH/test/BG/86.jpg,BG,4,no_wound,AZH-azh_test,test
+data/AZH/test/BG/87.jpg,BG,4,no_wound,AZH-azh_test,test
+data/AZH/test/BG/88.jpg,BG,4,no_wound,AZH-azh_test,test
+data/AZH/test/BG/89.jpg,BG,4,no_wound,AZH-azh_test,test
+data/AZH/test/BG/90.jpg,BG,4,no_wound,AZH-azh_test,test
+data/AZH/test/BG/91.jpg,BG,4,no_wound,AZH-azh_test,test
+data/AZH/test/BG/92.jpg,BG,4,no_wound,AZH-azh_test,test
+data/AZH/test/BG/93.jpg,BG,4,no_wound,AZH-azh_test,test
+data/AZH/test/BG/94.jpg,BG,4,no_wound,AZH-azh_test,test
+data/AZH/test/BG/95.jpg,BG,4,no_wound,AZH-azh_test,test
+data/AZH/test/BG/96.jpg,BG,4,no_wound,AZH-azh_test,test
+data/AZH/test/BG/97.jpg,BG,4,no_wound,AZH-azh_test,test
+data/AZH/test/BG/98.jpg,BG,4,no_wound,AZH-azh_test,test
+data/AZH/test/BG/99.jpg,BG,4,no_wound,AZH-azh_test,test
+data/AZH/test/diabetic/105_0.jpg,diabetic,0,diabetic,AZH-azh_test,test
+data/AZH/test/diabetic/106_0.jpg,diabetic,0,diabetic,AZH-azh_test,test
+data/AZH/test/diabetic/111_0.jpg,diabetic,0,diabetic,AZH-azh_test,test
+data/AZH/test/diabetic/112_0.jpg,diabetic,0,diabetic,AZH-azh_test,test
+data/AZH/test/diabetic/119_0.jpg,diabetic,0,diabetic,AZH-azh_test,test
+data/AZH/test/diabetic/121_0.jpg,diabetic,0,diabetic,AZH-azh_test,test
+data/AZH/test/diabetic/126_0.jpg,diabetic,0,diabetic,AZH-azh_test,test
+data/AZH/test/diabetic/129_0.jpg,diabetic,0,diabetic,AZH-azh_test,test
+data/AZH/test/diabetic/129_1.jpg,diabetic,0,diabetic,AZH-azh_test,test
+data/AZH/test/diabetic/129_2.jpg,diabetic,0,diabetic,AZH-azh_test,test
+data/AZH/test/diabetic/129_3.jpg,diabetic,0,diabetic,AZH-azh_test,test
+data/AZH/test/diabetic/12_0.jpg,diabetic,0,diabetic,AZH-azh_test,test
+data/AZH/test/diabetic/138_0.jpg,diabetic,0,diabetic,AZH-azh_test,test
+data/AZH/test/diabetic/138_1.jpg,diabetic,0,diabetic,AZH-azh_test,test
+data/AZH/test/diabetic/142_0.jpg,diabetic,0,diabetic,AZH-azh_test,test
+data/AZH/test/diabetic/145_0.jpg,diabetic,0,diabetic,AZH-azh_test,test
+data/AZH/test/diabetic/145_1.jpg,diabetic,0,diabetic,AZH-azh_test,test
+data/AZH/test/diabetic/14_0.jpg,diabetic,0,diabetic,AZH-azh_test,test
+data/AZH/test/diabetic/151_0.jpg,diabetic,0,diabetic,AZH-azh_test,test
+data/AZH/test/diabetic/17_0.jpg,diabetic,0,diabetic,AZH-azh_test,test
+data/AZH/test/diabetic/19_0.jpg,diabetic,0,diabetic,AZH-azh_test,test
+data/AZH/test/diabetic/23_0.jpg,diabetic,0,diabetic,AZH-azh_test,test
+data/AZH/test/diabetic/23_1.jpg,diabetic,0,diabetic,AZH-azh_test,test
+data/AZH/test/diabetic/27_0.jpg,diabetic,0,diabetic,AZH-azh_test,test
+data/AZH/test/diabetic/2_0.jpg,diabetic,0,diabetic,AZH-azh_test,test
+data/AZH/test/diabetic/33_0.jpg,diabetic,0,diabetic,AZH-azh_test,test
+data/AZH/test/diabetic/35_0.jpg,diabetic,0,diabetic,AZH-azh_test,test
+data/AZH/test/diabetic/39_0.jpg,diabetic,0,diabetic,AZH-azh_test,test
+data/AZH/test/diabetic/40_0.jpg,diabetic,0,diabetic,AZH-azh_test,test
+data/AZH/test/diabetic/45_0.jpg,diabetic,0,diabetic,AZH-azh_test,test
+data/AZH/test/diabetic/45_1.jpg,diabetic,0,diabetic,AZH-azh_test,test
+data/AZH/test/diabetic/48_0.jpg,diabetic,0,diabetic,AZH-azh_test,test
+data/AZH/test/diabetic/52_0.jpg,diabetic,0,diabetic,AZH-azh_test,test
+data/AZH/test/diabetic/56_0.jpg,diabetic,0,diabetic,AZH-azh_test,test
+data/AZH/test/diabetic/56_1.jpg,diabetic,0,diabetic,AZH-azh_test,test
+data/AZH/test/diabetic/56_2.jpg,diabetic,0,diabetic,AZH-azh_test,test
+data/AZH/test/diabetic/61_0.jpg,diabetic,0,diabetic,AZH-azh_test,test
+data/AZH/test/diabetic/62_0.jpg,diabetic,0,diabetic,AZH-azh_test,test
+data/AZH/test/diabetic/65_0.jpg,diabetic,0,diabetic,AZH-azh_test,test
+data/AZH/test/diabetic/65_1.jpg,diabetic,0,diabetic,AZH-azh_test,test
+data/AZH/test/diabetic/6_0.jpg,diabetic,0,diabetic,AZH-azh_test,test
+data/AZH/test/diabetic/70_0.jpg,diabetic,0,diabetic,AZH-azh_test,test
+data/AZH/test/diabetic/70_1.jpg,diabetic,0,diabetic,AZH-azh_test,test
+data/AZH/test/diabetic/82_0.jpg,diabetic,0,diabetic,AZH-azh_test,test
+data/AZH/test/diabetic/82_1.jpg,diabetic,0,diabetic,AZH-azh_test,test
+data/AZH/test/diabetic/8_0.jpg,diabetic,0,diabetic,AZH-azh_test,test
+data/AZH/test/no wound/100.jpg,no wound,4,no_wound,AZH-azh_test,test
+data/AZH/test/no wound/76.jpg,no wound,4,no_wound,AZH-azh_test,test
+data/AZH/test/no wound/77.jpg,no wound,4,no_wound,AZH-azh_test,test
+data/AZH/test/no wound/78.jpg,no wound,4,no_wound,AZH-azh_test,test
+data/AZH/test/no wound/79.jpg,no wound,4,no_wound,AZH-azh_test,test
+data/AZH/test/no wound/80.jpg,no wound,4,no_wound,AZH-azh_test,test
+data/AZH/test/no wound/81.jpg,no wound,4,no_wound,AZH-azh_test,test
+data/AZH/test/no wound/82.jpg,no wound,4,no_wound,AZH-azh_test,test
+data/AZH/test/no wound/83.jpg,no wound,4,no_wound,AZH-azh_test,test
+data/AZH/test/no wound/84.jpg,no wound,4,no_wound,AZH-azh_test,test
+data/AZH/test/no wound/85.jpg,no wound,4,no_wound,AZH-azh_test,test
+data/AZH/test/no wound/86.jpg,no wound,4,no_wound,AZH-azh_test,test
+data/AZH/test/no wound/87.jpg,no wound,4,no_wound,AZH-azh_test,test
+data/AZH/test/no wound/88.jpg,no wound,4,no_wound,AZH-azh_test,test
+data/AZH/test/no wound/89.jpg,no wound,4,no_wound,AZH-azh_test,test
+data/AZH/test/no wound/90.jpg,no wound,4,no_wound,AZH-azh_test,test
+data/AZH/test/no wound/91.jpg,no wound,4,no_wound,AZH-azh_test,test
+data/AZH/test/no wound/92.jpg,no wound,4,no_wound,AZH-azh_test,test
+data/AZH/test/no wound/93.jpg,no wound,4,no_wound,AZH-azh_test,test
+data/AZH/test/no wound/94.jpg,no wound,4,no_wound,AZH-azh_test,test
+data/AZH/test/no wound/95.jpg,no wound,4,no_wound,AZH-azh_test,test
+data/AZH/test/no wound/96.jpg,no wound,4,no_wound,AZH-azh_test,test
+data/AZH/test/no wound/97.jpg,no wound,4,no_wound,AZH-azh_test,test
+data/AZH/test/no wound/98.jpg,no wound,4,no_wound,AZH-azh_test,test
+data/AZH/test/no wound/99.jpg,no wound,4,no_wound,AZH-azh_test,test
+data/AZH/test/pressure/100_0.jpg,pressure,1,pressure,AZH-azh_test,test
+data/AZH/test/pressure/12_0.jpg,pressure,1,pressure,AZH-azh_test,test
+data/AZH/test/pressure/15_0.jpg,pressure,1,pressure,AZH-azh_test,test
+data/AZH/test/pressure/18_0.jpg,pressure,1,pressure,AZH-azh_test,test
+data/AZH/test/pressure/18_1.jpg,pressure,1,pressure,AZH-azh_test,test
+data/AZH/test/pressure/24_0.jpg,pressure,1,pressure,AZH-azh_test,test
+data/AZH/test/pressure/26_0.jpg,pressure,1,pressure,AZH-azh_test,test
+data/AZH/test/pressure/26_1.jpg,pressure,1,pressure,AZH-azh_test,test
+data/AZH/test/pressure/2_0.jpg,pressure,1,pressure,AZH-azh_test,test
+data/AZH/test/pressure/31_0.jpg,pressure,1,pressure,AZH-azh_test,test
+data/AZH/test/pressure/32_0.jpg,pressure,1,pressure,AZH-azh_test,test
+data/AZH/test/pressure/49_0.jpg,pressure,1,pressure,AZH-azh_test,test
+data/AZH/test/pressure/49_1.jpg,pressure,1,pressure,AZH-azh_test,test
+data/AZH/test/pressure/49_2.jpg,pressure,1,pressure,AZH-azh_test,test
+data/AZH/test/pressure/49_3.jpg,pressure,1,pressure,AZH-azh_test,test
+data/AZH/test/pressure/51_0.jpg,pressure,1,pressure,AZH-azh_test,test
+data/AZH/test/pressure/53_0.jpg,pressure,1,pressure,AZH-azh_test,test
+data/AZH/test/pressure/58_0.jpg,pressure,1,pressure,AZH-azh_test,test
+data/AZH/test/pressure/59_0.jpg,pressure,1,pressure,AZH-azh_test,test
+data/AZH/test/pressure/59_1.jpg,pressure,1,pressure,AZH-azh_test,test
+data/AZH/test/pressure/75_0.jpg,pressure,1,pressure,AZH-azh_test,test
+data/AZH/test/pressure/75_1.jpg,pressure,1,pressure,AZH-azh_test,test
+data/AZH/test/pressure/75_2.jpg,pressure,1,pressure,AZH-azh_test,test
+data/AZH/test/pressure/75_3.jpg,pressure,1,pressure,AZH-azh_test,test
+data/AZH/test/pressure/79_0.jpg,pressure,1,pressure,AZH-azh_test,test
+data/AZH/test/pressure/81_0.jpg,pressure,1,pressure,AZH-azh_test,test
+data/AZH/test/pressure/81_1.jpg,pressure,1,pressure,AZH-azh_test,test
+data/AZH/test/pressure/81_2.jpg,pressure,1,pressure,AZH-azh_test,test
+data/AZH/test/pressure/81_3.jpg,pressure,1,pressure,AZH-azh_test,test
+data/AZH/test/pressure/82_0.jpg,pressure,1,pressure,AZH-azh_test,test
+data/AZH/test/pressure/82_1.jpg,pressure,1,pressure,AZH-azh_test,test
+data/AZH/test/pressure/82_2.jpg,pressure,1,pressure,AZH-azh_test,test
+data/AZH/test/pressure/82_3.jpg,pressure,1,pressure,AZH-azh_test,test
+data/AZH/test/pressure/90_0.jpg,pressure,1,pressure,AZH-azh_test,test
+data/AZH/test/surgical/100_0.jpg,surgical,2,surgical,AZH-azh_test,test
+data/AZH/test/surgical/104_0.jpg,surgical,2,surgical,AZH-azh_test,test
+data/AZH/test/surgical/111_0.jpg,surgical,2,surgical,AZH-azh_test,test
+data/AZH/test/surgical/111_1.jpg,surgical,2,surgical,AZH-azh_test,test
+data/AZH/test/surgical/118_0.jpg,surgical,2,surgical,AZH-azh_test,test
+data/AZH/test/surgical/121_0.jpg,surgical,2,surgical,AZH-azh_test,test
+data/AZH/test/surgical/124_0.jpg,surgical,2,surgical,AZH-azh_test,test
+data/AZH/test/surgical/128_0.jpg,surgical,2,surgical,AZH-azh_test,test
+data/AZH/test/surgical/14_0.jpg,surgical,2,surgical,AZH-azh_test,test
+data/AZH/test/surgical/16_0.jpg,surgical,2,surgical,AZH-azh_test,test
+data/AZH/test/surgical/16_1.jpg,surgical,2,surgical,AZH-azh_test,test
+data/AZH/test/surgical/19_0.jpg,surgical,2,surgical,AZH-azh_test,test
+data/AZH/test/surgical/19_1.jpg,surgical,2,surgical,AZH-azh_test,test
+data/AZH/test/surgical/24_0.jpg,surgical,2,surgical,AZH-azh_test,test
+data/AZH/test/surgical/24_1.jpg,surgical,2,surgical,AZH-azh_test,test
+data/AZH/test/surgical/26_0.jpg,surgical,2,surgical,AZH-azh_test,test
+data/AZH/test/surgical/26_1.jpg,surgical,2,surgical,AZH-azh_test,test
+data/AZH/test/surgical/29_0.jpg,surgical,2,surgical,AZH-azh_test,test
+data/AZH/test/surgical/29_1.jpg,surgical,2,surgical,AZH-azh_test,test
+data/AZH/test/surgical/47_0.jpg,surgical,2,surgical,AZH-azh_test,test
+data/AZH/test/surgical/49_0.jpg,surgical,2,surgical,AZH-azh_test,test
+data/AZH/test/surgical/49_1.jpg,surgical,2,surgical,AZH-azh_test,test
+data/AZH/test/surgical/4_0.jpg,surgical,2,surgical,AZH-azh_test,test
+data/AZH/test/surgical/51_0.jpg,surgical,2,surgical,AZH-azh_test,test
+data/AZH/test/surgical/51_1.jpg,surgical,2,surgical,AZH-azh_test,test
+data/AZH/test/surgical/57_0.jpg,surgical,2,surgical,AZH-azh_test,test
+data/AZH/test/surgical/66_0.jpg,surgical,2,surgical,AZH-azh_test,test
+data/AZH/test/surgical/68_0.jpg,surgical,2,surgical,AZH-azh_test,test
+data/AZH/test/surgical/68_1.jpg,surgical,2,surgical,AZH-azh_test,test
+data/AZH/test/surgical/74_0.jpg,surgical,2,surgical,AZH-azh_test,test
+data/AZH/test/surgical/76_0.jpg,surgical,2,surgical,AZH-azh_test,test
+data/AZH/test/surgical/76_1.jpg,surgical,2,surgical,AZH-azh_test,test
+data/AZH/test/surgical/76_2.jpg,surgical,2,surgical,AZH-azh_test,test
+data/AZH/test/surgical/76_3.jpg,surgical,2,surgical,AZH-azh_test,test
+data/AZH/test/surgical/76_4.jpg,surgical,2,surgical,AZH-azh_test,test
+data/AZH/test/surgical/76_5.jpg,surgical,2,surgical,AZH-azh_test,test
+data/AZH/test/surgical/76_6.jpg,surgical,2,surgical,AZH-azh_test,test
+data/AZH/test/surgical/7_0.jpg,surgical,2,surgical,AZH-azh_test,test
+data/AZH/test/surgical/83_0.jpg,surgical,2,surgical,AZH-azh_test,test
+data/AZH/test/surgical/92_0.jpg,surgical,2,surgical,AZH-azh_test,test
+data/AZH/test/surgical/99_0.jpg,surgical,2,surgical,AZH-azh_test,test
+data/AZH/test/surgical/9_0.jpg,surgical,2,surgical,AZH-azh_test,test
+data/AZH/test/venous/104_0.jpg,venous,3,venous,AZH-azh_test,test
+data/AZH/test/venous/108_0.jpg,venous,3,venous,AZH-azh_test,test
+data/AZH/test/venous/108_1.jpg,venous,3,venous,AZH-azh_test,test
+data/AZH/test/venous/10_0.jpg,venous,3,venous,AZH-azh_test,test
+data/AZH/test/venous/11_0.jpg,venous,3,venous,AZH-azh_test,test
+data/AZH/test/venous/11_1.jpg,venous,3,venous,AZH-azh_test,test
+data/AZH/test/venous/11_2.jpg,venous,3,venous,AZH-azh_test,test
+data/AZH/test/venous/11_3.jpg,venous,3,venous,AZH-azh_test,test
+data/AZH/test/venous/11_4.jpg,venous,3,venous,AZH-azh_test,test
+data/AZH/test/venous/11_5.jpg,venous,3,venous,AZH-azh_test,test
+data/AZH/test/venous/121_0.jpg,venous,3,venous,AZH-azh_test,test
+data/AZH/test/venous/134_0.jpg,venous,3,venous,AZH-azh_test,test
+data/AZH/test/venous/134_1.jpg,venous,3,venous,AZH-azh_test,test
+data/AZH/test/venous/138_0.jpg,venous,3,venous,AZH-azh_test,test
+data/AZH/test/venous/138_1.jpg,venous,3,venous,AZH-azh_test,test
+data/AZH/test/venous/142_0.jpg,venous,3,venous,AZH-azh_test,test
+data/AZH/test/venous/145_0.jpg,venous,3,venous,AZH-azh_test,test
+data/AZH/test/venous/148_0.jpg,venous,3,venous,AZH-azh_test,test
+data/AZH/test/venous/151_0.jpg,venous,3,venous,AZH-azh_test,test
+data/AZH/test/venous/151_1.jpg,venous,3,venous,AZH-azh_test,test
+data/AZH/test/venous/156_0.jpg,venous,3,venous,AZH-azh_test,test
+data/AZH/test/venous/156_1.jpg,venous,3,venous,AZH-azh_test,test
+data/AZH/test/venous/17_0.jpg,venous,3,venous,AZH-azh_test,test
+data/AZH/test/venous/17_1.jpg,venous,3,venous,AZH-azh_test,test
+data/AZH/test/venous/25_0.jpg,venous,3,venous,AZH-azh_test,test
+data/AZH/test/venous/25_1.jpg,venous,3,venous,AZH-azh_test,test
+data/AZH/test/venous/25_2.jpg,venous,3,venous,AZH-azh_test,test
+data/AZH/test/venous/25_3.jpg,venous,3,venous,AZH-azh_test,test
+data/AZH/test/venous/2_0.jpg,venous,3,venous,AZH-azh_test,test
+data/AZH/test/venous/37_0.jpg,venous,3,venous,AZH-azh_test,test
+data/AZH/test/venous/37_1.jpg,venous,3,venous,AZH-azh_test,test
+data/AZH/test/venous/37_2.jpg,venous,3,venous,AZH-azh_test,test
+data/AZH/test/venous/37_3.jpg,venous,3,venous,AZH-azh_test,test
+data/AZH/test/venous/42_0.jpg,venous,3,venous,AZH-azh_test,test
+data/AZH/test/venous/42_1.jpg,venous,3,venous,AZH-azh_test,test
+data/AZH/test/venous/42_2.jpg,venous,3,venous,AZH-azh_test,test
+data/AZH/test/venous/42_3.jpg,venous,3,venous,AZH-azh_test,test
+data/AZH/test/venous/47_0.jpg,venous,3,venous,AZH-azh_test,test
+data/AZH/test/venous/47_1.jpg,venous,3,venous,AZH-azh_test,test
+data/AZH/test/venous/47_2.jpg,venous,3,venous,AZH-azh_test,test
+data/AZH/test/venous/51_0.jpg,venous,3,venous,AZH-azh_test,test
+data/AZH/test/venous/51_1.jpg,venous,3,venous,AZH-azh_test,test
+data/AZH/test/venous/53_0.jpg,venous,3,venous,AZH-azh_test,test
+data/AZH/test/venous/53_1.jpg,venous,3,venous,AZH-azh_test,test
+data/AZH/test/venous/53_2.jpg,venous,3,venous,AZH-azh_test,test
+data/AZH/test/venous/53_3.jpg,venous,3,venous,AZH-azh_test,test
+data/AZH/test/venous/53_4.jpg,venous,3,venous,AZH-azh_test,test
+data/AZH/test/venous/56_0.jpg,venous,3,venous,AZH-azh_test,test
+data/AZH/test/venous/56_1.jpg,venous,3,venous,AZH-azh_test,test
+data/AZH/test/venous/61_0.jpg,venous,3,venous,AZH-azh_test,test
+data/AZH/test/venous/67_0.jpg,venous,3,venous,AZH-azh_test,test
+data/AZH/test/venous/67_1.jpg,venous,3,venous,AZH-azh_test,test
+data/AZH/test/venous/75_0.jpg,venous,3,venous,AZH-azh_test,test
+data/AZH/test/venous/75_1.jpg,venous,3,venous,AZH-azh_test,test
+data/AZH/test/venous/78_0.jpg,venous,3,venous,AZH-azh_test,test
+data/AZH/test/venous/78_1.jpg,venous,3,venous,AZH-azh_test,test
+data/AZH/test/venous/78_2.jpg,venous,3,venous,AZH-azh_test,test
+data/AZH/test/venous/78_3.jpg,venous,3,venous,AZH-azh_test,test
+data/AZH/test/venous/7_0.jpg,venous,3,venous,AZH-azh_test,test
+data/AZH/test/venous/81_0.jpg,venous,3,venous,AZH-azh_test,test
+data/AZH/test/venous/81_1.jpg,venous,3,venous,AZH-azh_test,test
+data/AZH/test/venous/88_0.jpg,venous,3,venous,AZH-azh_test,test

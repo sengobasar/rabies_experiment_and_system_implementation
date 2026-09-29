@@ -1,0 +1,696 @@
+split,image_path,class_name
+train,data/AZH/train/BG/30.jpg,bg
+train,data/AZH/train/BG/6.jpg,bg
+train,data/AZH/train/BG/73.jpg,bg
+train,data/AZH/train/BG/39.jpg,bg
+train,data/AZH/train/BG/70.jpg,bg
+train,data/AZH/train/BG/46.jpg,bg
+train,data/AZH/train/BG/36.jpg,bg
+train,data/AZH/train/BG/1.jpg,bg
+train,data/AZH/train/BG/11.jpg,bg
+train,data/AZH/train/BG/65.jpg,bg
+train,data/AZH/train/BG/28.jpg,bg
+train,data/AZH/train/BG/67.jpg,bg
+train,data/AZH/train/BG/42.jpg,bg
+train,data/AZH/train/BG/50.jpg,bg
+train,data/AZH/train/BG/45.jpg,bg
+train,data/AZH/train/BG/63.jpg,bg
+train,data/AZH/train/BG/27.jpg,bg
+train,data/AZH/train/BG/5.jpg,bg
+train,data/AZH/train/BG/22.jpg,bg
+train,data/AZH/train/BG/54.jpg,bg
+train,data/AZH/train/BG/3.jpg,bg
+train,data/AZH/train/BG/55.jpg,bg
+train,data/AZH/train/BG/74.jpg,bg
+train,data/AZH/train/BG/9.jpg,bg
+train,data/AZH/train/BG/69.jpg,bg
+train,data/AZH/train/BG/34.jpg,bg
+train,data/AZH/train/BG/43.jpg,bg
+train,data/AZH/train/BG/56.jpg,bg
+train,data/AZH/train/BG/18.jpg,bg
+train,data/AZH/train/BG/8.jpg,bg
+train,data/AZH/train/BG/12.jpg,bg
+train,data/AZH/train/BG/51.jpg,bg
+train,data/AZH/train/BG/60.jpg,bg
+train,data/AZH/train/BG/41.jpg,bg
+train,data/AZH/train/BG/66.jpg,bg
+train,data/AZH/train/BG/72.jpg,bg
+train,data/AZH/train/BG/68.jpg,bg
+train,data/AZH/train/BG/21.jpg,bg
+train,data/AZH/train/BG/61.jpg,bg
+train,data/AZH/train/BG/37.jpg,bg
+train,data/AZH/train/BG/25.jpg,bg
+train,data/AZH/train/BG/26.jpg,bg
+train,data/AZH/train/BG/38.jpg,bg
+train,data/AZH/train/BG/53.jpg,bg
+train,data/AZH/train/BG/40.jpg,bg
+train,data/AZH/train/BG/14.jpg,bg
+train,data/AZH/train/BG/62.jpg,bg
+train,data/AZH/train/BG/17.jpg,bg
+train,data/AZH/train/BG/16.jpg,bg
+train,data/AZH/train/BG/4.jpg,bg
+train,data/AZH/train/BG/23.jpg,bg
+train,data/AZH/train/BG/44.jpg,bg
+train,data/AZH/train/BG/57.jpg,bg
+train,data/AZH/train/BG/32.jpg,bg
+train,data/AZH/train/BG/49.jpg,bg
+train,data/AZH/train/BG/7.jpg,bg
+train,data/AZH/train/BG/64.jpg,bg
+train,data/AZH/train/BG/29.jpg,bg
+train,data/AZH/train/BG/47.jpg,bg
+train,data/AZH/train/BG/2.jpg,bg
+train,data/AZH/train/diabetic/55_0.jpg,diabetic
+train,data/AZH/train/diabetic/149_0.jpg,diabetic
+train,data/AZH/train/diabetic/115_0.jpg,diabetic
+train,data/AZH/train/diabetic/132_0.jpg,diabetic
+train,data/AZH/train/diabetic/86_0.jpg,diabetic
+train,data/AZH/train/diabetic/53_0.jpg,diabetic
+train,data/AZH/train/diabetic/73_0.jpg,diabetic
+train,data/AZH/train/diabetic/50_0.jpg,diabetic
+train,data/AZH/train/diabetic/147_1.jpg,diabetic
+train,data/AZH/train/diabetic/9_1.jpg,diabetic
+train,data/AZH/train/diabetic/7_1.jpg,diabetic
+train,data/AZH/train/diabetic/21_0.jpg,diabetic
+train,data/AZH/train/diabetic/44_0.jpg,diabetic
+train,data/AZH/train/diabetic/99_0.jpg,diabetic
+train,data/AZH/train/diabetic/123_0.jpg,diabetic
+train,data/AZH/train/diabetic/67_0.jpg,diabetic
+train,data/AZH/train/diabetic/146_0.jpg,diabetic
+train,data/AZH/train/diabetic/15_0.jpg,diabetic
+train,data/AZH/train/diabetic/137_0.jpg,diabetic
+train,data/AZH/train/diabetic/16_0.jpg,diabetic
+train,data/AZH/train/diabetic/87_0.jpg,diabetic
+train,data/AZH/train/diabetic/78_0.jpg,diabetic
+train,data/AZH/train/diabetic/58_0.jpg,diabetic
+train,data/AZH/train/diabetic/9_2.jpg,diabetic
+train,data/AZH/train/diabetic/93_0.jpg,diabetic
+train,data/AZH/train/diabetic/46_0.jpg,diabetic
+train,data/AZH/train/diabetic/125_0.jpg,diabetic
+train,data/AZH/train/diabetic/147_0.jpg,diabetic
+train,data/AZH/train/diabetic/95_0.jpg,diabetic
+train,data/AZH/train/diabetic/72_0.jpg,diabetic
+train,data/AZH/train/diabetic/116_0.jpg,diabetic
+train,data/AZH/train/diabetic/32_1.jpg,diabetic
+train,data/AZH/train/diabetic/34_0.jpg,diabetic
+train,data/AZH/train/diabetic/83_0.jpg,diabetic
+train,data/AZH/train/diabetic/28_0.jpg,diabetic
+train,data/AZH/train/diabetic/60_0.jpg,diabetic
+train,data/AZH/train/diabetic/9_0.jpg,diabetic
+train,data/AZH/train/diabetic/88_0.jpg,diabetic
+train,data/AZH/train/diabetic/139_0.jpg,diabetic
+train,data/AZH/train/diabetic/63_0.jpg,diabetic
+train,data/AZH/train/diabetic/131_0.jpg,diabetic
+train,data/AZH/train/diabetic/54_1.jpg,diabetic
+train,data/AZH/train/diabetic/110_0.jpg,diabetic
+train,data/AZH/train/diabetic/85_0.jpg,diabetic
+train,data/AZH/train/diabetic/108_0.jpg,diabetic
+train,data/AZH/train/diabetic/78_1.jpg,diabetic
+train,data/AZH/train/diabetic/141_0.jpg,diabetic
+train,data/AZH/train/diabetic/64_1.jpg,diabetic
+train,data/AZH/train/diabetic/26_0.jpg,diabetic
+train,data/AZH/train/diabetic/10_0.jpg,diabetic
+train,data/AZH/train/diabetic/76_0.jpg,diabetic
+train,data/AZH/train/diabetic/43_0.jpg,diabetic
+train,data/AZH/train/diabetic/75_0.jpg,diabetic
+train,data/AZH/train/diabetic/90_0.jpg,diabetic
+train,data/AZH/train/diabetic/49_0.jpg,diabetic
+train,data/AZH/train/diabetic/5_0.jpg,diabetic
+train,data/AZH/train/diabetic/84_0.jpg,diabetic
+train,data/AZH/train/diabetic/132_1.jpg,diabetic
+train,data/AZH/train/diabetic/77_0.jpg,diabetic
+train,data/AZH/train/diabetic/127_0.jpg,diabetic
+train,data/AZH/train/diabetic/68_0.jpg,diabetic
+train,data/AZH/train/diabetic/154_0.jpg,diabetic
+train,data/AZH/train/diabetic/134_1.jpg,diabetic
+train,data/AZH/train/diabetic/7_0.jpg,diabetic
+train,data/AZH/train/diabetic/59_0.jpg,diabetic
+train,data/AZH/train/diabetic/89_0.jpg,diabetic
+train,data/AZH/train/diabetic/152_0.jpg,diabetic
+train,data/AZH/train/diabetic/122_1.jpg,diabetic
+train,data/AZH/train/diabetic/4_0.jpg,diabetic
+train,data/AZH/train/diabetic/66_0.jpg,diabetic
+train,data/AZH/train/diabetic/74_0.jpg,diabetic
+train,data/AZH/train/diabetic/153_0.jpg,diabetic
+train,data/AZH/train/diabetic/103_0.jpg,diabetic
+train,data/AZH/train/diabetic/120_0.jpg,diabetic
+train,data/AZH/train/diabetic/25_0.jpg,diabetic
+train,data/AZH/train/diabetic/130_0.jpg,diabetic
+train,data/AZH/train/diabetic/113_0.jpg,diabetic
+train,data/AZH/train/diabetic/22_0.jpg,diabetic
+train,data/AZH/train/diabetic/38_0.jpg,diabetic
+train,data/AZH/train/diabetic/96_0.jpg,diabetic
+train,data/AZH/train/diabetic/81_0.jpg,diabetic
+train,data/AZH/train/diabetic/30_0.jpg,diabetic
+train,data/AZH/train/diabetic/101_0.jpg,diabetic
+train,data/AZH/train/diabetic/37_0.jpg,diabetic
+train,data/AZH/train/diabetic/64_2.jpg,diabetic
+train,data/AZH/train/diabetic/140_0.jpg,diabetic
+train,data/AZH/train/diabetic/51_0.jpg,diabetic
+train,data/AZH/train/diabetic/11_0.jpg,diabetic
+train,data/AZH/train/diabetic/139_1.jpg,diabetic
+train,data/AZH/train/diabetic/54_0.jpg,diabetic
+train,data/AZH/train/diabetic/91_0.jpg,diabetic
+train,data/AZH/train/diabetic/118_0.jpg,diabetic
+train,data/AZH/train/diabetic/55_1.jpg,diabetic
+train,data/AZH/train/diabetic/31_0.jpg,diabetic
+train,data/AZH/train/diabetic/79_0.jpg,diabetic
+train,data/AZH/train/diabetic/18_0.jpg,diabetic
+train,data/AZH/train/diabetic/81_1.jpg,diabetic
+train,data/AZH/train/diabetic/92_0.jpg,diabetic
+train,data/AZH/train/diabetic/122_0.jpg,diabetic
+train,data/AZH/train/diabetic/24_0.jpg,diabetic
+train,data/AZH/train/diabetic/144_0.jpg,diabetic
+train,data/AZH/train/diabetic/133_0.jpg,diabetic
+train,data/AZH/train/diabetic/64_0.jpg,diabetic
+train,data/AZH/train/diabetic/57_0.jpg,diabetic
+train,data/AZH/train/diabetic/41_0.jpg,diabetic
+train,data/AZH/train/diabetic/146_1.jpg,diabetic
+train,data/AZH/train/diabetic/150_0.jpg,diabetic
+train,data/AZH/train/diabetic/80_0.jpg,diabetic
+train,data/AZH/train/diabetic/128_0.jpg,diabetic
+train,data/AZH/train/diabetic/42_0.jpg,diabetic
+train,data/AZH/train/diabetic/148_0.jpg,diabetic
+train,data/AZH/train/diabetic/13_0.jpg,diabetic
+train,data/AZH/train/no wound/28.jpg,no_wound
+train,data/AZH/train/no wound/4.jpg,no_wound
+train,data/AZH/train/no wound/55.jpg,no_wound
+train,data/AZH/train/no wound/23.jpg,no_wound
+train,data/AZH/train/no wound/69.jpg,no_wound
+train,data/AZH/train/no wound/5.jpg,no_wound
+train,data/AZH/train/no wound/37.jpg,no_wound
+train,data/AZH/train/no wound/12.jpg,no_wound
+train,data/AZH/train/no wound/60.jpg,no_wound
+train,data/AZH/train/no wound/17.jpg,no_wound
+train,data/AZH/train/no wound/29.jpg,no_wound
+train,data/AZH/train/no wound/64.jpg,no_wound
+train,data/AZH/train/no wound/25.jpg,no_wound
+train,data/AZH/train/no wound/24.jpg,no_wound
+train,data/AZH/train/no wound/66.jpg,no_wound
+train,data/AZH/train/no wound/22.jpg,no_wound
+train,data/AZH/train/no wound/42.jpg,no_wound
+train,data/AZH/train/no wound/16.jpg,no_wound
+train,data/AZH/train/no wound/19.jpg,no_wound
+train,data/AZH/train/no wound/75.jpg,no_wound
+train,data/AZH/train/no wound/7.jpg,no_wound
+train,data/AZH/train/no wound/40.jpg,no_wound
+train,data/AZH/train/no wound/39.jpg,no_wound
+train,data/AZH/train/no wound/18.jpg,no_wound
+train,data/AZH/train/no wound/46.jpg,no_wound
+train,data/AZH/train/no wound/43.jpg,no_wound
+train,data/AZH/train/no wound/63.jpg,no_wound
+train,data/AZH/train/no wound/52.jpg,no_wound
+train,data/AZH/train/no wound/47.jpg,no_wound
+train,data/AZH/train/no wound/59.jpg,no_wound
+train,data/AZH/train/no wound/49.jpg,no_wound
+train,data/AZH/train/no wound/72.jpg,no_wound
+train,data/AZH/train/no wound/61.jpg,no_wound
+train,data/AZH/train/no wound/32.jpg,no_wound
+train,data/AZH/train/no wound/3.jpg,no_wound
+train,data/AZH/train/no wound/38.jpg,no_wound
+train,data/AZH/train/no wound/48.jpg,no_wound
+train,data/AZH/train/no wound/45.jpg,no_wound
+train,data/AZH/train/no wound/13.jpg,no_wound
+train,data/AZH/train/no wound/58.jpg,no_wound
+train,data/AZH/train/no wound/51.jpg,no_wound
+train,data/AZH/train/no wound/14.jpg,no_wound
+train,data/AZH/train/no wound/15.jpg,no_wound
+train,data/AZH/train/no wound/73.jpg,no_wound
+train,data/AZH/train/no wound/41.jpg,no_wound
+train,data/AZH/train/no wound/67.jpg,no_wound
+train,data/AZH/train/no wound/26.jpg,no_wound
+train,data/AZH/train/no wound/30.jpg,no_wound
+train,data/AZH/train/no wound/2.jpg,no_wound
+train,data/AZH/train/no wound/56.jpg,no_wound
+train,data/AZH/train/no wound/20.jpg,no_wound
+train,data/AZH/train/no wound/53.jpg,no_wound
+train,data/AZH/train/no wound/10.jpg,no_wound
+train,data/AZH/train/no wound/34.jpg,no_wound
+train,data/AZH/train/no wound/33.jpg,no_wound
+train,data/AZH/train/no wound/36.jpg,no_wound
+train,data/AZH/train/no wound/9.jpg,no_wound
+train,data/AZH/train/no wound/8.jpg,no_wound
+train,data/AZH/train/no wound/27.jpg,no_wound
+train,data/AZH/train/no wound/11.jpg,no_wound
+train,data/AZH/train/pressure/66_0.jpg,pressure
+train,data/AZH/train/pressure/3_0.jpg,pressure
+train,data/AZH/train/pressure/99_0.jpg,pressure
+train,data/AZH/train/pressure/40_0.jpg,pressure
+train,data/AZH/train/pressure/72_0.jpg,pressure
+train,data/AZH/train/pressure/16_0.jpg,pressure
+train,data/AZH/train/pressure/10_2.jpg,pressure
+train,data/AZH/train/pressure/95_0.jpg,pressure
+train,data/AZH/train/pressure/36_0.jpg,pressure
+train,data/AZH/train/pressure/23_0.jpg,pressure
+train,data/AZH/train/pressure/65_0.jpg,pressure
+train,data/AZH/train/pressure/7_1.jpg,pressure
+train,data/AZH/train/pressure/61_0.jpg,pressure
+train,data/AZH/train/pressure/17_0.jpg,pressure
+train,data/AZH/train/pressure/25_3.jpg,pressure
+train,data/AZH/train/pressure/14_0.jpg,pressure
+train,data/AZH/train/pressure/89_0.jpg,pressure
+train,data/AZH/train/pressure/93_0.jpg,pressure
+train,data/AZH/train/pressure/13_2.jpg,pressure
+train,data/AZH/train/pressure/56_0.jpg,pressure
+train,data/AZH/train/pressure/60_0.jpg,pressure
+train,data/AZH/train/pressure/73_0.jpg,pressure
+train,data/AZH/train/pressure/54_0.jpg,pressure
+train,data/AZH/train/pressure/50_0.jpg,pressure
+train,data/AZH/train/pressure/11_0.jpg,pressure
+train,data/AZH/train/pressure/45_0.jpg,pressure
+train,data/AZH/train/pressure/46_0.jpg,pressure
+train,data/AZH/train/pressure/13_1.jpg,pressure
+train,data/AZH/train/pressure/1_0.jpg,pressure
+train,data/AZH/train/pressure/64_0.jpg,pressure
+train,data/AZH/train/pressure/19_0.jpg,pressure
+train,data/AZH/train/pressure/96_0.jpg,pressure
+train,data/AZH/train/pressure/27_0.jpg,pressure
+train,data/AZH/train/pressure/25_0.jpg,pressure
+train,data/AZH/train/pressure/4_0.jpg,pressure
+train,data/AZH/train/pressure/77_0.jpg,pressure
+train,data/AZH/train/pressure/44_0.jpg,pressure
+train,data/AZH/train/pressure/98_0.jpg,pressure
+train,data/AZH/train/pressure/8_0.jpg,pressure
+train,data/AZH/train/pressure/47_0.jpg,pressure
+train,data/AZH/train/pressure/22_0.jpg,pressure
+train,data/AZH/train/pressure/91_0.jpg,pressure
+train,data/AZH/train/pressure/48_3.jpg,pressure
+train,data/AZH/train/pressure/62_0.jpg,pressure
+train,data/AZH/train/pressure/33_0.jpg,pressure
+train,data/AZH/train/pressure/74_0.jpg,pressure
+train,data/AZH/train/pressure/67_0.jpg,pressure
+train,data/AZH/train/pressure/35_0.jpg,pressure
+train,data/AZH/train/pressure/11_1.jpg,pressure
+train,data/AZH/train/pressure/87_0.jpg,pressure
+train,data/AZH/train/pressure/83_0.jpg,pressure
+train,data/AZH/train/pressure/21_0.jpg,pressure
+train,data/AZH/train/pressure/55_0.jpg,pressure
+train,data/AZH/train/pressure/94_0.jpg,pressure
+train,data/AZH/train/pressure/80_0.jpg,pressure
+train,data/AZH/train/pressure/25_1.jpg,pressure
+train,data/AZH/train/pressure/20_0.jpg,pressure
+train,data/AZH/train/pressure/7_0.jpg,pressure
+train,data/AZH/train/pressure/69_1.jpg,pressure
+train,data/AZH/train/pressure/48_1.jpg,pressure
+train,data/AZH/train/pressure/41_1.jpg,pressure
+train,data/AZH/train/pressure/39_0.jpg,pressure
+train,data/AZH/train/pressure/41_0.jpg,pressure
+train,data/AZH/train/pressure/72_1.jpg,pressure
+train,data/AZH/train/pressure/34_0.jpg,pressure
+train,data/AZH/train/pressure/10_3.jpg,pressure
+train,data/AZH/train/pressure/68_0.jpg,pressure
+train,data/AZH/train/pressure/11_2.jpg,pressure
+train,data/AZH/train/pressure/28_0.jpg,pressure
+train,data/AZH/train/pressure/52_0.jpg,pressure
+train,data/AZH/train/pressure/30_0.jpg,pressure
+train,data/AZH/train/pressure/42_0.jpg,pressure
+train,data/AZH/train/pressure/48_0.jpg,pressure
+train,data/AZH/train/pressure/92_0.jpg,pressure
+train,data/AZH/train/pressure/10_1.jpg,pressure
+train,data/AZH/train/pressure/71_0.jpg,pressure
+train,data/AZH/train/pressure/69_0.jpg,pressure
+train,data/AZH/train/pressure/6_1.jpg,pressure
+train,data/AZH/train/pressure/9_0.jpg,pressure
+train,data/AZH/train/pressure/38_0.jpg,pressure
+train,data/AZH/train/surgical/1_0.jpg,surgical
+train,data/AZH/train/surgical/75_0.jpg,surgical
+train,data/AZH/train/surgical/39_0.jpg,surgical
+train,data/AZH/train/surgical/23_0.jpg,surgical
+train,data/AZH/train/surgical/116_0.jpg,surgical
+train,data/AZH/train/surgical/52_0.jpg,surgical
+train,data/AZH/train/surgical/95_0.jpg,surgical
+train,data/AZH/train/surgical/80_0.jpg,surgical
+train,data/AZH/train/surgical/54_0.jpg,surgical
+train,data/AZH/train/surgical/42_0.jpg,surgical
+train,data/AZH/train/surgical/65_0.jpg,surgical
+train,data/AZH/train/surgical/64_1.jpg,surgical
+train,data/AZH/train/surgical/18_0.jpg,surgical
+train,data/AZH/train/surgical/52_1.jpg,surgical
+train,data/AZH/train/surgical/5_1.jpg,surgical
+train,data/AZH/train/surgical/5_2.jpg,surgical
+train,data/AZH/train/surgical/69_0.jpg,surgical
+train,data/AZH/train/surgical/6_1.jpg,surgical
+train,data/AZH/train/surgical/17_1.jpg,surgical
+train,data/AZH/train/surgical/43_0.jpg,surgical
+train,data/AZH/train/surgical/17_0.jpg,surgical
+train,data/AZH/train/surgical/94_0.jpg,surgical
+train,data/AZH/train/surgical/82_0.jpg,surgical
+train,data/AZH/train/surgical/13_1.jpg,surgical
+train,data/AZH/train/surgical/87_0.jpg,surgical
+train,data/AZH/train/surgical/105_0.jpg,surgical
+train,data/AZH/train/surgical/79_0.jpg,surgical
+train,data/AZH/train/surgical/81_0.jpg,surgical
+train,data/AZH/train/surgical/31_0.jpg,surgical
+train,data/AZH/train/surgical/44_0.jpg,surgical
+train,data/AZH/train/surgical/115_0.jpg,surgical
+train,data/AZH/train/surgical/15_0.jpg,surgical
+train,data/AZH/train/surgical/110_1.jpg,surgical
+train,data/AZH/train/surgical/37_0.jpg,surgical
+train,data/AZH/train/surgical/78_0.jpg,surgical
+train,data/AZH/train/surgical/102_0.jpg,surgical
+train,data/AZH/train/surgical/11_0.jpg,surgical
+train,data/AZH/train/surgical/97_0.jpg,surgical
+train,data/AZH/train/surgical/67_0.jpg,surgical
+train,data/AZH/train/surgical/41_0.jpg,surgical
+train,data/AZH/train/surgical/55_0.jpg,surgical
+train,data/AZH/train/surgical/91_0.jpg,surgical
+train,data/AZH/train/surgical/27_0.jpg,surgical
+train,data/AZH/train/surgical/50_0.jpg,surgical
+train,data/AZH/train/surgical/106_0.jpg,surgical
+train,data/AZH/train/surgical/23_1.jpg,surgical
+train,data/AZH/train/surgical/11_2.jpg,surgical
+train,data/AZH/train/surgical/123_0.jpg,surgical
+train,data/AZH/train/surgical/59_0.jpg,surgical
+train,data/AZH/train/surgical/12_0.jpg,surgical
+train,data/AZH/train/surgical/114_0.jpg,surgical
+train,data/AZH/train/surgical/119_0.jpg,surgical
+train,data/AZH/train/surgical/36_0.jpg,surgical
+train,data/AZH/train/surgical/75_1.jpg,surgical
+train,data/AZH/train/surgical/40_0.jpg,surgical
+train,data/AZH/train/surgical/22_0.jpg,surgical
+train,data/AZH/train/surgical/34_0.jpg,surgical
+train,data/AZH/train/surgical/112_0.jpg,surgical
+train,data/AZH/train/surgical/5_0.jpg,surgical
+train,data/AZH/train/surgical/11_1.jpg,surgical
+train,data/AZH/train/surgical/35_0.jpg,surgical
+train,data/AZH/train/surgical/120_0.jpg,surgical
+train,data/AZH/train/surgical/58_0.jpg,surgical
+train,data/AZH/train/surgical/70_0.jpg,surgical
+train,data/AZH/train/surgical/98_0.jpg,surgical
+train,data/AZH/train/surgical/109_0.jpg,surgical
+train,data/AZH/train/surgical/8_1.jpg,surgical
+train,data/AZH/train/surgical/96_0.jpg,surgical
+train,data/AZH/train/surgical/113_0.jpg,surgical
+train,data/AZH/train/surgical/85_0.jpg,surgical
+train,data/AZH/train/surgical/73_0.jpg,surgical
+train,data/AZH/train/surgical/90_0.jpg,surgical
+train,data/AZH/train/surgical/127_0.jpg,surgical
+train,data/AZH/train/surgical/2_0.jpg,surgical
+train,data/AZH/train/surgical/45_0.jpg,surgical
+train,data/AZH/train/surgical/38_0.jpg,surgical
+train,data/AZH/train/surgical/84_0.jpg,surgical
+train,data/AZH/train/surgical/60_1.jpg,surgical
+train,data/AZH/train/surgical/48_0.jpg,surgical
+train,data/AZH/train/surgical/117_0.jpg,surgical
+train,data/AZH/train/surgical/53_0.jpg,surgical
+train,data/AZH/train/surgical/86_0.jpg,surgical
+train,data/AZH/train/surgical/50_1.jpg,surgical
+train,data/AZH/train/surgical/107_0.jpg,surgical
+train,data/AZH/train/surgical/126_0.jpg,surgical
+train,data/AZH/train/surgical/93_0.jpg,surgical
+train,data/AZH/train/surgical/30_0.jpg,surgical
+train,data/AZH/train/surgical/20_1.jpg,surgical
+train,data/AZH/train/surgical/32_0.jpg,surgical
+train,data/AZH/train/surgical/25_0.jpg,surgical
+train,data/AZH/train/surgical/6_0.jpg,surgical
+train,data/AZH/train/surgical/110_0.jpg,surgical
+train,data/AZH/train/surgical/61_0.jpg,surgical
+train,data/AZH/train/surgical/77_0.jpg,surgical
+train,data/AZH/train/surgical/20_0.jpg,surgical
+train,data/AZH/train/surgical/67_1.jpg,surgical
+train,data/AZH/train/surgical/64_0.jpg,surgical
+train,data/AZH/train/venous/70_0.jpg,venous
+train,data/AZH/train/venous/71_0.jpg,venous
+train,data/AZH/train/venous/5_0.jpg,venous
+train,data/AZH/train/venous/46_3.jpg,venous
+train,data/AZH/train/venous/141_1.jpg,venous
+train,data/AZH/train/venous/40_5.jpg,venous
+train,data/AZH/train/venous/55_0.jpg,venous
+train,data/AZH/train/venous/93_0.jpg,venous
+train,data/AZH/train/venous/122_2.jpg,venous
+train,data/AZH/train/venous/90_0.jpg,venous
+train,data/AZH/train/venous/85_0.jpg,venous
+train,data/AZH/train/venous/82_0.jpg,venous
+train,data/AZH/train/venous/125_0.jpg,venous
+train,data/AZH/train/venous/136_0.jpg,venous
+train,data/AZH/train/venous/76_0.jpg,venous
+train,data/AZH/train/venous/127_0.jpg,venous
+train,data/AZH/train/venous/6_1.jpg,venous
+train,data/AZH/train/venous/30_1.jpg,venous
+train,data/AZH/train/venous/26_0.jpg,venous
+train,data/AZH/train/venous/97_0.jpg,venous
+train,data/AZH/train/venous/39_1.jpg,venous
+train,data/AZH/train/venous/150_0.jpg,venous
+train,data/AZH/train/venous/86_0.jpg,venous
+train,data/AZH/train/venous/57_0.jpg,venous
+train,data/AZH/train/venous/119_0.jpg,venous
+train,data/AZH/train/venous/87_4.jpg,venous
+train,data/AZH/train/venous/34_0.jpg,venous
+train,data/AZH/train/venous/102_0.jpg,venous
+train,data/AZH/train/venous/6_2.jpg,venous
+train,data/AZH/train/venous/98_1.jpg,venous
+train,data/AZH/train/venous/97_2.jpg,venous
+train,data/AZH/train/venous/101_1.jpg,venous
+train,data/AZH/train/venous/139_0.jpg,venous
+train,data/AZH/train/venous/115_0.jpg,venous
+train,data/AZH/train/venous/113_0.jpg,venous
+train,data/AZH/train/venous/29_0.jpg,venous
+train,data/AZH/train/venous/153_0.jpg,venous
+train,data/AZH/train/venous/9_0.jpg,venous
+train,data/AZH/train/venous/122_3.jpg,venous
+train,data/AZH/train/venous/5_1.jpg,venous
+train,data/AZH/train/venous/14_0.jpg,venous
+train,data/AZH/train/venous/111_0.jpg,venous
+train,data/AZH/train/venous/94_0.jpg,venous
+train,data/AZH/train/venous/141_0.jpg,venous
+train,data/AZH/train/venous/117_0.jpg,venous
+train,data/AZH/train/venous/91_1.jpg,venous
+train,data/AZH/train/venous/117_1.jpg,venous
+train,data/AZH/train/venous/27_0.jpg,venous
+train,data/AZH/train/venous/116_0.jpg,venous
+train,data/AZH/train/venous/153_1.jpg,venous
+train,data/AZH/train/venous/18_0.jpg,venous
+train,data/AZH/train/venous/101_0.jpg,venous
+train,data/AZH/train/venous/40_6.jpg,venous
+train,data/AZH/train/venous/118_1.jpg,venous
+train,data/AZH/train/venous/87_1.jpg,venous
+train,data/AZH/train/venous/131_0.jpg,venous
+train,data/AZH/train/venous/87_0.jpg,venous
+train,data/AZH/train/venous/105_0.jpg,venous
+train,data/AZH/train/venous/63_0.jpg,venous
+train,data/AZH/train/venous/64_1.jpg,venous
+train,data/AZH/train/venous/110_2.jpg,venous
+train,data/AZH/train/venous/46_1.jpg,venous
+train,data/AZH/train/venous/72_0.jpg,venous
+train,data/AZH/train/venous/73_0.jpg,venous
+train,data/AZH/train/venous/109_0.jpg,venous
+train,data/AZH/train/venous/6_0.jpg,venous
+train,data/AZH/train/venous/155_0.jpg,venous
+train,data/AZH/train/venous/62_0.jpg,venous
+train,data/AZH/train/venous/122_0.jpg,venous
+train,data/AZH/train/venous/130_0.jpg,venous
+train,data/AZH/train/venous/45_0.jpg,venous
+train,data/AZH/train/venous/144_4.jpg,venous
+train,data/AZH/train/venous/52_0.jpg,venous
+train,data/AZH/train/venous/64_0.jpg,venous
+train,data/AZH/train/venous/74_0.jpg,venous
+train,data/AZH/train/venous/144_2.jpg,venous
+train,data/AZH/train/venous/50_0.jpg,venous
+train,data/AZH/train/venous/132_0.jpg,venous
+train,data/AZH/train/venous/8_1.jpg,venous
+train,data/AZH/train/venous/21_0.jpg,venous
+train,data/AZH/train/venous/63_1.jpg,venous
+train,data/AZH/train/venous/97_1.jpg,venous
+train,data/AZH/train/venous/89_0.jpg,venous
+train,data/AZH/train/venous/129_0.jpg,venous
+train,data/AZH/train/venous/146_0.jpg,venous
+train,data/AZH/train/venous/110_1.jpg,venous
+train,data/AZH/train/venous/41_1.jpg,venous
+train,data/AZH/train/venous/60_0.jpg,venous
+train,data/AZH/train/venous/112_0.jpg,venous
+train,data/AZH/train/venous/137_1.jpg,venous
+train,data/AZH/train/venous/128_0.jpg,venous
+train,data/AZH/train/venous/22_0.jpg,venous
+train,data/AZH/train/venous/58_0.jpg,venous
+train,data/AZH/train/venous/118_0.jpg,venous
+train,data/AZH/train/venous/77_0.jpg,venous
+train,data/AZH/train/venous/4_0.jpg,venous
+train,data/AZH/train/venous/35_0.jpg,venous
+train,data/AZH/train/venous/140_1.jpg,venous
+train,data/AZH/train/venous/48_0.jpg,venous
+train,data/AZH/train/venous/40_3.jpg,venous
+train,data/AZH/train/venous/114_1.jpg,venous
+train,data/AZH/train/venous/80_0.jpg,venous
+train,data/AZH/train/venous/65_0.jpg,venous
+train,data/AZH/train/venous/8_0.jpg,venous
+train,data/AZH/train/venous/41_0.jpg,venous
+train,data/AZH/train/venous/133_0.jpg,venous
+train,data/AZH/train/venous/122_1.jpg,venous
+train,data/AZH/train/venous/1_0.jpg,venous
+train,data/AZH/train/venous/54_0.jpg,venous
+train,data/AZH/train/venous/154_0.jpg,venous
+train,data/AZH/train/venous/87_2.jpg,venous
+train,data/AZH/train/venous/40_7.jpg,venous
+train,data/AZH/train/venous/24_0.jpg,venous
+train,data/AZH/train/venous/38_0.jpg,venous
+train,data/AZH/train/venous/40_1.jpg,venous
+train,data/AZH/train/venous/150_1.jpg,venous
+train,data/AZH/train/venous/20_0.jpg,venous
+train,data/AZH/train/venous/84_0.jpg,venous
+train,data/AZH/train/venous/68_0.jpg,venous
+train,data/AZH/train/venous/118_3.jpg,venous
+train,data/AZH/train/venous/124_0.jpg,venous
+train,data/AZH/train/venous/149_0.jpg,venous
+train,data/AZH/train/venous/103_1.jpg,venous
+train,data/AZH/train/venous/118_2.jpg,venous
+train,data/AZH/train/venous/23_0.jpg,venous
+train,data/AZH/train/venous/95_0.jpg,venous
+train,data/AZH/train/venous/15_0.jpg,venous
+train,data/AZH/train/venous/23_1.jpg,venous
+train,data/AZH/train/venous/83_0.jpg,venous
+train,data/AZH/train/venous/60_1.jpg,venous
+train,data/AZH/train/venous/144_3.jpg,venous
+train,data/AZH/train/venous/152_0.jpg,venous
+train,data/AZH/train/venous/123_0.jpg,venous
+train,data/AZH/train/venous/6_3.jpg,venous
+train,data/AZH/train/venous/91_0.jpg,venous
+train,data/AZH/train/venous/106_0.jpg,venous
+train,data/AZH/train/venous/79_0.jpg,venous
+train,data/AZH/train/venous/92_0.jpg,venous
+train,data/AZH/train/venous/110_3.jpg,venous
+train,data/AZH/train/venous/99_0.jpg,venous
+train,data/AZH/train/venous/40_2.jpg,venous
+train,data/AZH/train/venous/96_0.jpg,venous
+train,data/AZH/train/venous/59_0.jpg,venous
+train,data/AZH/train/venous/68_1.jpg,venous
+train,data/AZH/train/venous/107_0.jpg,venous
+train,data/AZH/train/venous/115_1.jpg,venous
+train,data/AZH/train/venous/43_0.jpg,venous
+train,data/AZH/train/venous/39_0.jpg,venous
+val,data/AZH/train/BG/31.jpg,bg
+val,data/AZH/train/BG/33.jpg,bg
+val,data/AZH/train/BG/35.jpg,bg
+val,data/AZH/train/BG/75.jpg,bg
+val,data/AZH/train/BG/52.jpg,bg
+val,data/AZH/train/BG/20.jpg,bg
+val,data/AZH/train/BG/71.jpg,bg
+val,data/AZH/train/BG/24.jpg,bg
+val,data/AZH/train/BG/48.jpg,bg
+val,data/AZH/train/BG/13.jpg,bg
+val,data/AZH/train/BG/58.jpg,bg
+val,data/AZH/train/BG/10.jpg,bg
+val,data/AZH/train/BG/19.jpg,bg
+val,data/AZH/train/BG/15.jpg,bg
+val,data/AZH/train/BG/59.jpg,bg
+val,data/AZH/train/diabetic/71_0.jpg,diabetic
+val,data/AZH/train/diabetic/29_0.jpg,diabetic
+val,data/AZH/train/diabetic/20_0.jpg,diabetic
+val,data/AZH/train/diabetic/102_0.jpg,diabetic
+val,data/AZH/train/diabetic/107_0.jpg,diabetic
+val,data/AZH/train/diabetic/134_0.jpg,diabetic
+val,data/AZH/train/diabetic/47_0.jpg,diabetic
+val,data/AZH/train/diabetic/131_1.jpg,diabetic
+val,data/AZH/train/diabetic/143_0.jpg,diabetic
+val,data/AZH/train/diabetic/109_0.jpg,diabetic
+val,data/AZH/train/diabetic/25_1.jpg,diabetic
+val,data/AZH/train/diabetic/146_2.jpg,diabetic
+val,data/AZH/train/diabetic/94_0.jpg,diabetic
+val,data/AZH/train/diabetic/32_0.jpg,diabetic
+val,data/AZH/train/diabetic/135_0.jpg,diabetic
+val,data/AZH/train/diabetic/104_0.jpg,diabetic
+val,data/AZH/train/diabetic/36_0.jpg,diabetic
+val,data/AZH/train/diabetic/98_0.jpg,diabetic
+val,data/AZH/train/diabetic/136_0.jpg,diabetic
+val,data/AZH/train/diabetic/69_0.jpg,diabetic
+val,data/AZH/train/diabetic/100_0.jpg,diabetic
+val,data/AZH/train/diabetic/117_0.jpg,diabetic
+val,data/AZH/train/diabetic/124_0.jpg,diabetic
+val,data/AZH/train/diabetic/1_0.jpg,diabetic
+val,data/AZH/train/diabetic/97_0.jpg,diabetic
+val,data/AZH/train/diabetic/3_0.jpg,diabetic
+val,data/AZH/train/diabetic/114_0.jpg,diabetic
+val,data/AZH/train/no wound/50.jpg,no_wound
+val,data/AZH/train/no wound/65.jpg,no_wound
+val,data/AZH/train/no wound/70.jpg,no_wound
+val,data/AZH/train/no wound/31.jpg,no_wound
+val,data/AZH/train/no wound/57.jpg,no_wound
+val,data/AZH/train/no wound/54.jpg,no_wound
+val,data/AZH/train/no wound/35.jpg,no_wound
+val,data/AZH/train/no wound/44.jpg,no_wound
+val,data/AZH/train/no wound/74.jpg,no_wound
+val,data/AZH/train/no wound/6.jpg,no_wound
+val,data/AZH/train/no wound/1.jpg,no_wound
+val,data/AZH/train/no wound/71.jpg,no_wound
+val,data/AZH/train/no wound/68.jpg,no_wound
+val,data/AZH/train/no wound/21.jpg,no_wound
+val,data/AZH/train/no wound/62.jpg,no_wound
+val,data/AZH/train/pressure/86_0.jpg,pressure
+val,data/AZH/train/pressure/10_0.jpg,pressure
+val,data/AZH/train/pressure/84_0.jpg,pressure
+val,data/AZH/train/pressure/37_0.jpg,pressure
+val,data/AZH/train/pressure/13_0.jpg,pressure
+val,data/AZH/train/pressure/97_0.jpg,pressure
+val,data/AZH/train/pressure/48_2.jpg,pressure
+val,data/AZH/train/pressure/25_4.jpg,pressure
+val,data/AZH/train/pressure/63_0.jpg,pressure
+val,data/AZH/train/pressure/5_0.jpg,pressure
+val,data/AZH/train/pressure/88_0.jpg,pressure
+val,data/AZH/train/pressure/76_0.jpg,pressure
+val,data/AZH/train/pressure/57_0.jpg,pressure
+val,data/AZH/train/pressure/6_0.jpg,pressure
+val,data/AZH/train/pressure/43_0.jpg,pressure
+val,data/AZH/train/pressure/78_0.jpg,pressure
+val,data/AZH/train/pressure/38_1.jpg,pressure
+val,data/AZH/train/pressure/29_0.jpg,pressure
+val,data/AZH/train/pressure/85_0.jpg,pressure
+val,data/AZH/train/pressure/25_2.jpg,pressure
+val,data/AZH/train/surgical/15_1.jpg,surgical
+val,data/AZH/train/surgical/101_0.jpg,surgical
+val,data/AZH/train/surgical/88_0.jpg,surgical
+val,data/AZH/train/surgical/89_0.jpg,surgical
+val,data/AZH/train/surgical/103_0.jpg,surgical
+val,data/AZH/train/surgical/28_0.jpg,surgical
+val,data/AZH/train/surgical/60_0.jpg,surgical
+val,data/AZH/train/surgical/77_1.jpg,surgical
+val,data/AZH/train/surgical/3_0.jpg,surgical
+val,data/AZH/train/surgical/108_0.jpg,surgical
+val,data/AZH/train/surgical/63_0.jpg,surgical
+val,data/AZH/train/surgical/62_0.jpg,surgical
+val,data/AZH/train/surgical/72_0.jpg,surgical
+val,data/AZH/train/surgical/56_0.jpg,surgical
+val,data/AZH/train/surgical/8_0.jpg,surgical
+val,data/AZH/train/surgical/71_0.jpg,surgical
+val,data/AZH/train/surgical/125_0.jpg,surgical
+val,data/AZH/train/surgical/37_1.jpg,surgical
+val,data/AZH/train/surgical/21_0.jpg,surgical
+val,data/AZH/train/surgical/87_1.jpg,surgical
+val,data/AZH/train/surgical/33_0.jpg,surgical
+val,data/AZH/train/surgical/13_0.jpg,surgical
+val,data/AZH/train/surgical/46_0.jpg,surgical
+val,data/AZH/train/surgical/122_0.jpg,surgical
+val,data/AZH/train/venous/147_0.jpg,venous
+val,data/AZH/train/venous/16_0.jpg,venous
+val,data/AZH/train/venous/69_0.jpg,venous
+val,data/AZH/train/venous/40_0.jpg,venous
+val,data/AZH/train/venous/49_0.jpg,venous
+val,data/AZH/train/venous/87_3.jpg,venous
+val,data/AZH/train/venous/36_0.jpg,venous
+val,data/AZH/train/venous/19_0.jpg,venous
+val,data/AZH/train/venous/52_1.jpg,venous
+val,data/AZH/train/venous/33_0.jpg,venous
+val,data/AZH/train/venous/106_1.jpg,venous
+val,data/AZH/train/venous/137_0.jpg,venous
+val,data/AZH/train/venous/114_0.jpg,venous
+val,data/AZH/train/venous/126_0.jpg,venous
+val,data/AZH/train/venous/98_0.jpg,venous
+val,data/AZH/train/venous/40_4.jpg,venous
+val,data/AZH/train/venous/46_0.jpg,venous
+val,data/AZH/train/venous/13_0.jpg,venous
+val,data/AZH/train/venous/41_2.jpg,venous
+val,data/AZH/train/venous/54_1.jpg,venous
+val,data/AZH/train/venous/66_0.jpg,venous
+val,data/AZH/train/venous/144_0.jpg,venous
+val,data/AZH/train/venous/31_0.jpg,venous
+val,data/AZH/train/venous/143_0.jpg,venous
+val,data/AZH/train/venous/107_1.jpg,venous
+val,data/AZH/train/venous/110_0.jpg,venous
+val,data/AZH/train/venous/44_0.jpg,venous
+val,data/AZH/train/venous/46_2.jpg,venous
+val,data/AZH/train/venous/120_0.jpg,venous
+val,data/AZH/train/venous/38_1.jpg,venous
+val,data/AZH/train/venous/32_0.jpg,venous
+val,data/AZH/train/venous/100_0.jpg,venous
+val,data/AZH/train/venous/140_0.jpg,venous
+val,data/AZH/train/venous/30_0.jpg,venous
+val,data/AZH/train/venous/103_0.jpg,venous
+val,data/AZH/train/venous/144_1.jpg,venous
+val,data/AZH/train/venous/3_0.jpg,venous

@@ -1,0 +1,64 @@
+*.ckpt
+*.safetensors
+__pycache__/
+*.log
+.ipynb_checkpoints/
+01_Trained_Models/
+02_Baseline_Models/
+03_Pretrained_Weights/
+
+hf_upload/
+release/
+verify/
+assets/*.pdf
+*.pt
+*.pth
+*.ckpt
+remap_check.txt
+
+DATASET_CARD.md
+MODEL_CARD.md
+
+# datasets - not redistributed (see README)
+data/FUSeg/
+data/AZH/
+data/Medetec/
+data.tar.gz
+!data/processed/
+
+# weights - on Hugging Face
+01_Trained_Models/
+02_Baseline_Models/
+03_Pretrained_Weights/
+*.pt
+*.pth
+*.ckpt
+*.safetensors
+
+# HF staging
+hf_upload/
+hf_assets/
+hf_dataset_README.md
+release/
+verify/
+
+# release tooling
+release_prep.py
+rename_model.py
+stage_for_hf.py
+split_weights.py
+export_weights.py
+check_outputs_survived.py
+scrub_notebooks.py
+DATASET_CARD.md
+MODEL_CARD.md
+
+# working files
+remap_check.txt
+__pycache__/
+.ipynb_checkpoints/
+
+*.zip
+01_Trained_Models.zip
+
+*.zip

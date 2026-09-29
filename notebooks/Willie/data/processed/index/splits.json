@@ -1,0 +1,58 @@
+{
+  "seed": 42,
+  "fus_protocol": {
+    "train": "labeled",
+    "val": "labeled (primary eval)",
+    "test": "unlabeled (inference-only)"
+  },
+  "counts_by_dataset_task_split": [
+    {
+      "dataset": "AZH",
+      "task": "cls",
+      "split": "test",
+      "sample_id": 234
+    },
+    {
+      "dataset": "AZH",
+      "task": "cls",
+      "split": "train",
+      "sample_id": 696
+    },
+    {
+      "dataset": "FUSeg",
+      "task": "seg",
+      "split": "test",
+      "sample_id": 200
+    },
+    {
+      "dataset": "FUSeg",
+      "task": "seg",
+      "split": "train",
+      "sample_id": 610
+    },
+    {
+      "dataset": "FUSeg",
+      "task": "seg",
+      "split": "val",
+      "sample_id": 400
+    },
+    {
+      "dataset": "Medetec",
+      "task": "cls",
+      "split": "test",
+      "sample_id": 62
+    },
+    {
+      "dataset": "Medetec",
+      "task": "cls",
+      "split": "train",
+      "sample_id": 267
+    },
+    {
+      "dataset": "Medetec",
+      "task": "cls",
+      "split": "val",
+      "sample_id": 56
+    }
+  ]
+}

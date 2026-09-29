@@ -1,0 +1,97 @@
+{
+  "fuseg": {
+    "train": {
+      "n_images": 610,
+      "n_labels": 610
+    },
+    "val": {
+      "n_images": 400,
+      "n_labels": 400
+    },
+    "test": {
+      "n_images": 0,
+      "n_labels": "N/A"
+    }
+  },
+  "azh": {
+    "Train": {
+      "BG": 75,
+      "diabetic": 139,
+      "no wound": 75,
+      "pressure": 100,
+      "surgical": 122,
+      "venous": 185
+    },
+    "Test": {
+      "BG": 25,
+      "diabetic": 46,
+      "no wound": 25,
+      "pressure": 34,
+      "surgical": 42,
+      "venous": 62
+    }
+  },
+  "medetec": {
+    "diabetic": 47,
+    "pressure": 170,
+    "toes": 34,
+    "venous": 133
+  },
+  "unified_class_counts": {
+    "no_wound": 200,
+    "diabetic": 266,
+    "pressure": 304,
+    "surgical": 164,
+    "venous": 380
+  },
+  "fuseg_empty_masks": {
+    "train": {
+      "empty": 10,
+      "total": 610,
+      "wound": 600
+    },
+    "val": {
+      "empty": 14,
+      "total": 400,
+      "wound": 386
+    }
+  },
+  "image_dimensions": {
+    "FUSeg": {
+      "widths_summary": {
+        "min": 512,
+        "max": 512,
+        "mean": 512.0
+      },
+      "heights_summary": {
+        "min": 512,
+        "max": 512,
+        "mean": 512.0
+      }
+    },
+    "AZH": {
+      "widths_summary": {
+        "min": 61,
+        "max": 2391,
+        "mean": 217.215
+      },
+      "heights_summary": {
+        "min": 67,
+        "max": 2391,
+        "mean": 221.715
+      }
+    },
+    "Medetec": {
+      "widths_summary": {
+        "min": 102,
+        "max": 154,
+        "mean": 152.31
+      },
+      "heights_summary": {
+        "min": 99,
+        "max": 154,
+        "mean": 115.075
+      }
+    }
+  }
+}
