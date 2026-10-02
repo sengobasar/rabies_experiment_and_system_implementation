@@ -1,0 +1,48 @@
+{
+  "xgboost_esm": {
+    "auroc": 0.7625,
+    "auprc": 0.1591
+  },
+  "baseline_xgboost": {
+    "auroc": 0.7031,
+    "auprc": 0.1373
+  },
+  "delta": {
+    "auroc": 0.0594,
+    "auprc": 0.0218
+  },
+  "per_antibody": {
+    "17C7": {
+      "auroc": 0.7459,
+      "auprc": 0.1672
+    },
+    "CR4098": {
+      "auroc": 0.7609,
+      "auprc": 0.0992
+    },
+    "CR57": {
+      "auroc": 0.7381,
+      "auprc": 0.1257
+    },
+    "CTB012": {
+      "auroc": 0.6994,
+      "auprc": 0.2286
+    },
+    "RVA122": {
+      "auroc": 0.823,
+      "auprc": 0.17
+    },
+    "RVC20": {
+      "auroc": 0.7987,
+      "auprc": 0.1979
+    },
+    "RVC58": {
+      "auroc": 0.794,
+      "auprc": 0.1448
+    },
+    "RVC68": {
+      "auroc": 0.7396,
+      "auprc": 0.139
+    }
+  }
+}
