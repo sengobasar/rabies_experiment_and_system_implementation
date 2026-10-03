@@ -1,0 +1,36 @@
+{
+  "consensus_sites": [
+    211,
+    333,
+    143,
+    145,
+    269,
+    361,
+    226,
+    228,
+    344,
+    334,
+    223,
+    61
+  ],
+  "known_matches": {
+    "antigenic_site_III": [
+      333,
+      334,
+      344
+    ],
+    "lateral_loop_site_I": [
+      226,
+      228
+    ],
+    "fusion_loop": [
+      143,
+      145
+    ]
+  },
+  "novel_candidates": [
+    211,
+    269,
+    361
+  ]
+}

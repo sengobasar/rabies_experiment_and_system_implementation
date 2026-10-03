@@ -1,0 +1,28 @@
+{
+  "mean_baseline_auroc": 0.7003,
+  "mean_esm_auroc": 0.7677,
+  "mean_delta": 0.0674,
+  "t_statistic": 9.7477,
+  "p_value": 2.5e-05,
+  "significant": true,
+  "per_antibody_base": {
+    "17C7": 0.7049,
+    "CR4098": 0.7525,
+    "CR57": 0.6506,
+    "CTB012": 0.6415,
+    "RVA122": 0.7442,
+    "RVC20": 0.7028,
+    "RVC58": 0.7375,
+    "RVC68": 0.6679
+  },
+  "per_antibody_esm": {
+    "17C7": 0.7471,
+    "CR4098": 0.7904,
+    "CR57": 0.7418,
+    "CTB012": 0.711,
+    "RVA122": 0.8201,
+    "RVC20": 0.7915,
+    "RVC58": 0.7985,
+    "RVC68": 0.7413
+  }
+}

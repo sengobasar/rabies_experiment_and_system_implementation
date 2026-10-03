@@ -1,0 +1,21 @@
+{
+  "single_antibody": {
+    "auroc": 0.7674
+  },
+  "crucell_family": {
+    "auroc": 0.7519,
+    "auprc": 0.1197
+  },
+  "rvc_series_family": {
+    "auroc": 0.7705,
+    "auprc": 0.1529
+  },
+  "murine_17C7": {
+    "auroc": 0.7609,
+    "auprc": 0.1803
+  },
+  "distinct_family": {
+    "auroc": 0.7407,
+    "auprc": 0.1913
+  }
+}

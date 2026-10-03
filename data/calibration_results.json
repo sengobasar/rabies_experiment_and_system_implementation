@@ -1,0 +1,49 @@
+{
+  "ece": 0.0074,
+  "total_predictions": 65034,
+  "overall_positive_rate": 0.071,
+  "bins": [
+    {
+      "bin": 1,
+      "predicted": 0.031,
+      "observed": 0.036,
+      "count": 46095
+    },
+    {
+      "bin": 2,
+      "predicted": 0.144,
+      "observed": 0.142,
+      "count": 14655
+    },
+    {
+      "bin": 3,
+      "predicted": 0.24,
+      "observed": 0.204,
+      "count": 3785
+    },
+    {
+      "bin": 4,
+      "predicted": 0.329,
+      "observed": 0.211,
+      "count": 441
+    },
+    {
+      "bin": 5,
+      "predicted": 0.431,
+      "observed": 0.17,
+      "count": 53
+    },
+    {
+      "bin": 6,
+      "predicted": 0.557,
+      "observed": 0.0,
+      "count": 4
+    },
+    {
+      "bin": 7,
+      "predicted": 0.608,
+      "observed": 0.0,
+      "count": 1
+    }
+  ]
+}

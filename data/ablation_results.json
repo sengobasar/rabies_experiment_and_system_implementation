@@ -1,0 +1,18 @@
+{
+  "A_onehot_pos": {
+    "auroc": 0.6834,
+    "auprc": 0.131
+  },
+  "B_plus_G_esm": {
+    "auroc": 0.759,
+    "auprc": 0.1617
+  },
+  "C_plus_ab_esm": {
+    "auroc": 0.6805,
+    "auprc": 0.1357
+  },
+  "D_plus_both": {
+    "auroc": 0.7594,
+    "auprc": 0.1594
+  }
+}
