@@ -1,0 +1,11 @@
+{
+  "baseline": "G-ESM only (antigen-centric proxy)",
+  "proxy_mean_auroc": 0.7667097841003561,
+  "your_model_mean_auroc": 0.7665728982881904,
+  "mean_delta": -0.00013688581216575457,
+  "per_antibody_delta_range": [
+    -0.00044950166621871013,
+    0.00013920254318511294
+  ],
+  "conclusion": "Antibody embeddings add no predictive value; model is effectively antigen-centric"
+}

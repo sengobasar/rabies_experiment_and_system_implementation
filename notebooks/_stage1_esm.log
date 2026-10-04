@@ -1,0 +1,43 @@
+
+==============================================================================
+CELL 9  (execution_count=10)
+==============================================================================
+Device: cuda
+G length: 433 aa
+Embedding shape: (433, 480)  (one vector per residue)
+✅ Saved: ../data/esm_cache/G_esm_t12.npy
+
+
+==============================================================================
+CELL 10  (execution_count=11)
+==============================================================================
+  17C7      VH=(480,)  VL=(480,)  concat=(960,)
+  CR4098    VH=(480,)  VL=(480,)  concat=(960,)
+  CR57      VH=(480,)  VL=(480,)  concat=(960,)
+  CTB012    VH=(480,)  VL=(480,)  concat=(960,)
+  RVA122    VH=(480,)  VL=(480,)  concat=(960,)
+  RVC20     VH=(480,)  VL=(480,)  concat=(960,)
+  RVC58     VH=(480,)  VL=(480,)  concat=(960,)
+  RVC68     VH=(480,)  VL=(480,)  concat=(960,)
+
+✅ Saved: ../data/esm_cache/antibody_esm_t12.npz
+
+
+==============================================================================
+CELL 13  (execution_count=14)
+==============================================================================
+Device: cuda
+G length: 433 aa
+G embedding: (433, 1280)
+  17C7      concat=(2560,)
+  CR4098    concat=(2560,)
+  CR57      concat=(2560,)
+  CTB012    concat=(2560,)
+  RVA122    concat=(2560,)
+  RVC20     concat=(2560,)
+  RVC58     concat=(2560,)
+  RVC68     concat=(2560,)
+
+✅ Saved: G_esm_650M.npy + antibody_esm_650M.npz
+freed ESM-650M from memory
+

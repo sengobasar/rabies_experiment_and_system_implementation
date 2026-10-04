@@ -1,0 +1,130 @@
+
+==============================================================================
+CELL 7  (execution_count=8)
+==============================================================================
+============================================================
+SEARCHING FOR SEQUENCE FILES
+============================================================
+  Additional_Data\AntibodySequences\RABV-G_DMS_AntibodySequences.fasta  (2214 bytes)
+  Additional_Data\LibrarySpecs\Rabies-G_Pasteur-fullORF.fasta  (1640 bytes)
+  Additional_Data\PrimerSequences\RABV-G_Mutagenesis-Primers.fasta  (1584 bytes)
+  Additional_Data\PrimerSequences\RABV-G_Sequencing-Primers.fasta  (813 bytes)
+  data\gene_sequence\codon.fasta  (1308 bytes)
+  data\gene_sequence\protein.fasta  (442 bytes)
+  non-pipeline_analyses\RABV_nextstrain\Results\G\nucleotide.fasta  (11585510 bytes)
+  non-pipeline_analyses\RABV_nextstrain\Results\G\Alignments\codon.fasta  (11492161 bytes)
+  non-pipeline_analyses\RABV_nextstrain\Results\G\Alignments\codon_ungapped.fasta  (11819819 bytes)
+  non-pipeline_analyses\RABV_nextstrain\Results\G\Alignments\codon_ungapped_no_outgroup.fasta  (11818163 bytes)
+  non-pipeline_analyses\RABV_nextstrain\Results\G\Alignments\protein.fasta  (4112733 bytes)
+  non-pipeline_analyses\RABV_nextstrain\Results\G\Alignments\protein_ungapped.fasta  (4098487 bytes)
+  non-pipeline_analyses\RABV_nextstrain\Results\G\Alignments\protein_ungapped_no_outgroup.fasta  (4097915 bytes)
+  non-pipeline_analyses\RABV_nextstrain\Results\G\Augur_AA_Alignements\G_ectodomain.fasta  (6711227 bytes)
+  non-pipeline_analyses\RABV_nextstrain\Results\G\Augur_AA_Alignements\G_full_length.fasta  (8064312 bytes)
+  non-pipeline_analyses\RABV_nextstrain\Results\G\ORF_sequences\codon.fasta  (11819578 bytes)
+  non-pipeline_analyses\RABV_nextstrain\Results\G\ORF_sequences\codon_temp.fasta  (11919300 bytes)
+  non-pipeline_analyses\RABV_nextstrain\Results\G\ORF_sequences\protein.fasta  (4098412 bytes)
+  non-pipeline_analyses\RABV_nextstrain\Results\G\ORF_sequences\protein_temp.fasta  (4198134 bytes)
+  non-pipeline_analyses\RABV_nextstrain\Configure\Input_Data\RABV_G_protein_reference_NC_001542.gb  (3793 bytes)
+  non-pipeline_analyses\RABV_nextstrain\Configure\Input_Data\RABV_reference_NC_001542.gb  (25602 bytes)
+  non-pipeline_analyses\RABV_nextstrain\Results\G\G_reference.gb  (4540 bytes)
+  non-pipeline_analyses\RABV_nextstrain\Results\Logs\G\create_new_references.txt  (0 bytes)
+  non-pipeline_analyses\RABV_nextstrain\Scripts\newreference.py  (3121 bytes)
+  Additional_Data\AntibodySequences  (0 bytes)
+  Additional_Data\PlasmidSequences  (4096 bytes)
+  Additional_Data\PrimerSequences  (0 bytes)
+  data\gene_sequence  (0 bytes)
+  non-pipeline_analyses\Additional_Notebooks\natural_sequence_antibody_escape-PaperFigures.ipynb  (5452992 bytes)
+  non-pipeline_analyses\RABV_nextstrain\Results\G\ORF_sequences  (4096 bytes)
+  non-pipeline_analyses\RABV_nextstrain\Results\Logs\G\align_protein_sequences.txt  (47464 bytes)
+  non-pipeline_analyses\RABV_nextstrain\Results\Logs\G\ancestral_tree_sequences.txt  (320 bytes)
+  non-pipeline_analyses\RABV_nextstrain\Results\Logs\G\get_codon_sequences.txt  (45 bytes)
+  non-pipeline_analyses\RABV_nextstrain\Results\Logs\G\get_protein_sequences.txt  (45 bytes)
+  non-pipeline_analyses\RABV_nextstrain\Results\Logs\G\refine_tree_sequences.txt  (340 bytes)
+  non-pipeline_analyses\RABV_nextstrain\Results\Logs\G\traits_tree_sequences.txt  (374 bytes)
+  non-pipeline_analyses\RABV_nextstrain\Results\Logs\G\translate_tree_sequences.txt  (174 bytes)
+  non-pipeline_analyses\RABV_nextstrain\Results\Logs\G\tree_sequences.txt  (467 bytes)
+  non-pipeline_analyses\RABV_nextstrain\Rules\align_sequences.smk  (2317 bytes)
+  non-pipeline_analyses\RABV_nextstrain\Rules\calculate_sequence_variation.smk  (558 bytes)
+  non-pipeline_analyses\RABV_nextstrain\Scripts\download_NCBI_sequences.py  (24174 bytes)
+  non-pipeline_analyses\RABV_nextstrain\Scripts\extracted_sequence_verification.py  (3963 bytes)
+  notebooks\natural_sequence_antibody_escape.ipynb  (5780331 bytes)
+  Additional_Data\PlasmidSequences\26_HDM-Hgpm2.gb  (449000 bytes)
+  Additional_Data\PlasmidSequences\27_HDM-tat1b.gb  (159114 bytes)
+  Additional_Data\PlasmidSequences\28_pRC-CMV_Rev1b.gb  (176062 bytes)
+  Additional_Data\PlasmidSequences\29_HDM-VSV-G.gb  (31616 bytes)
+  Additional_Data\PlasmidSequences\3968_HDM_Rabies-G_Pasteur_GenscriptOpt3.gb  (16397 bytes)
+  Additional_Data\PlasmidSequences\3969_V5LP_pH2rU3_ForInd_ExtGag_Humes_RABV-G_Pasteur-Genscript3_CMV_zsGT2APurR.gb  (43695 bytes)
+  Additional_Data\PlasmidSequences\4016_V5LP_pHrU3_ForInd-Extgag_mcherry.gb  (42355 bytes)
+  Additional_Data\PlasmidSequences\4954_HDM_Rabies-G_Pasteur_I338T.gb  (16308 bytes)
+  Additional_Data\PlasmidSequences\4955_HDM_Rabies-G_Pasteur_R346S.gb  (16308 bytes)
+  Additional_Data\PlasmidSequences\4956_HDM_Rabies-G_AGN94399-WT.gb  (16108 bytes)
+  Additional_Data\PlasmidSequences\4957_HDM_Rabies-G_AGN94399-S346R.gb  (15987 bytes)
+  Additional_Data\PlasmidSequences\4958_HDM_Rabies-G_AGN94399_T338Igb.gb  (15987 bytes)
+  Additional_Data\PlasmidSequences\4959_HDM_Rabies-G_QEJ74619_WT.gb  (16594 bytes)
+  data\PacBio_amplicon.gb  (2767 bytes)
+
+============================================================
+CONTENTS OF data/ FOLDER
+============================================================
+  [DIR ] PDB_Structures
+  [FILE] PacBio_amplicon.gb
+  [FILE] PacBio_feature_parse_specs.yaml
+  [FILE] PacBio_runs.csv
+  [FILE] README.md
+  [FILE] antibody_escape_config.yml
+  [FILE] barcode_runs.csv
+  [FILE] barcode_runs_all-functional-separate.csv
+  [FILE] designed_mutations.csv
+  [FILE] dms_viz_config.yml
+  [FILE] func_effects_config.yml
+  [DIR ] gene_sequence
+  [FILE] neutralization_standard_barcodes.csv
+  [FILE] site_numbering_map.csv
+  [FILE] summaries_config.yml
+
+============================================================
+FIRST FASTA-LIKE FILE (if any)
+============================================================
+File: Additional_Data\AntibodySequences\RABV-G_DMS_AntibodySequences.fasta
+  >CR4098_HeavyChain
+  QVQLVESGGGAVQPGRSLRLSCAASGFTFSSYGMHWVRQAPGKGLEWVAVILYDGSDKFYADSVKGRFTISRDNSKNTLYLQMNSLRAEDTAVYYCAKVAVAGTHFDYWGQGTLVTVSS
+  
+  >CR4098_LightChain
+  DIQMTQSPSSLSASVGDRVTITCRASQGIRNDLGWYQQKPGKAPKLLIYAASSLQSGVPSRFSGSGSGTDFTLTISSLQPEDFATYYCQQLNSYPPTFGGGTKVEIK
+  
+  >17C7_HeavyChain
+
+
+==============================================================================
+CELL 8  (execution_count=9)
+==============================================================================
+============================================================
+RABV-G REFERENCE PROTEIN
+============================================================
+  ID:     gene
+  Length: 433 aa
+  Seq:    FGKFPIYTIPDKLGPWSPIDIHHLSCPNNLVVEDEGCTNLSGFSYMELKVGYISAIKMNGFTCTGVVTEAETYTNFVGYV...
+
+============================================================
+ANTIBODY SEQUENCES
+============================================================
+  CR4098_HeavyChain                119 aa
+  CR4098_LightChain                107 aa
+  17C7_HeavyChain                  119 aa
+  17C7_LightChain                  107 aa
+  CR57_HeavyChain                  127 aa
+  CR57_LightChain                  112 aa
+  RVA122_HeavyChain                123 aa
+  RVA122_LightChain                110 aa
+  RVC20_HeavyChain                 124 aa
+  RVC20_LightChain                 107 aa
+  RVC58_HeavyChain                 124 aa
+  RVC58_LightChain                 110 aa
+  RVC68_HeavyChain                 120 aa
+  RVC68_LightChain                 107 aa
+  CTB012_HeavyChain                120 aa
+  CTB012_LightChain                112 aa
+
+Total sequences found: 16
+IDs: ['CR4098_HeavyChain', 'CR4098_LightChain', '17C7_HeavyChain', '17C7_LightChain', 'CR57_HeavyChain', 'CR57_LightChain', 'RVA122_HeavyChain', 'RVA122_LightChain', 'RVC20_HeavyChain', 'RVC20_LightChain', 'RVC58_HeavyChain', 'RVC58_LightChain', 'RVC68_HeavyChain', 'RVC68_LightChain', 'CTB012_HeavyChain', 'CTB012_LightChain']
+

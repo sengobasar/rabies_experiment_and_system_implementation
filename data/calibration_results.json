@@ -1,47 +1,47 @@
 {
-  "ece": 0.0074,
-  "total_predictions": 65034,
-  "overall_positive_rate": 0.071,
+  "ece": 0.008878592764936548,
+  "total_predictions": 65045,
+  "overall_positive_rate": 0.07105849796294873,
   "bins": [
     {
       "bin": 1,
-      "predicted": 0.031,
-      "observed": 0.036,
-      "count": 46095
+      "predicted": 0.030386103317141533,
+      "observed": 0.03667020654082053,
+      "count": 46141
     },
     {
       "bin": 2,
-      "predicted": 0.144,
-      "observed": 0.142,
-      "count": 14655
+      "predicted": 0.14371177554130554,
+      "observed": 0.1398159207475585,
+      "count": 14233
     },
     {
       "bin": 3,
-      "predicted": 0.24,
-      "observed": 0.204,
-      "count": 3785
+      "predicted": 0.23937642574310303,
+      "observed": 0.20245546461242175,
+      "count": 4154
     },
     {
       "bin": 4,
-      "predicted": 0.329,
-      "observed": 0.211,
-      "count": 441
+      "predicted": 0.3310679793357849,
+      "observed": 0.18995633187772926,
+      "count": 458
     },
     {
       "bin": 5,
-      "predicted": 0.431,
-      "observed": 0.17,
+      "predicted": 0.42990735173225403,
+      "observed": 0.22641509433962265,
       "count": 53
     },
     {
       "bin": 6,
-      "predicted": 0.557,
+      "predicted": 0.5398825407028198,
       "observed": 0.0,
-      "count": 4
+      "count": 5
     },
     {
       "bin": 7,
-      "predicted": 0.608,
+      "predicted": 0.6202488541603088,
       "observed": 0.0,
       "count": 1
     }

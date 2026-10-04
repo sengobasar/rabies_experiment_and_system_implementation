@@ -1,0 +1,27 @@
+20:39:39  START  cell 15
+20:50:57  DONE   cell 15  (677.9s)
+20:50:57  START  cell 16
+20:54:03  DONE   cell 16  (185.8s)
+20:54:03  START  cell 20
+21:00:17  DONE   cell 20  (374.0s)
+21:00:17  START  cell 21
+21:00:18  DONE   cell 21  (1.4s)
+21:00:18  START  cell 22
+21:00:18  DONE   cell 22  (0.0s)
+21:00:18  START  cell 23
+21:00:19  DONE   cell 23  (0.7s)
+21:00:19  START  cell 24
+21:00:19  DONE   cell 24  (0.0s)
+21:00:19  START  cell 25
+21:00:20  DONE   cell 25  (0.5s)
+21:00:20  START  cell 26
+21:00:20  DONE   cell 26  (0.4s)
+21:00:20  START  cell 27
+21:00:21  DONE   cell 27  (0.4s)
+21:00:21  START  cell 28
+21:05:09  DONE   cell 28  (288.5s)
+21:05:09  START  cell 29
+21:05:09  DONE   cell 29  (0.0s)
+21:05:09  START  cell 30
+21:05:10  DONE   cell 30  (0.4s)
+21:05:11  RUN COMPLETE (25.6 min)

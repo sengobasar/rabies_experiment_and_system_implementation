@@ -1,0 +1,32 @@
+{   "encoder_parameters": {
+        "hidden_layers_sizes"                 :   [4000,1000,300],
+        "z_dim"                               :   64,
+        "convolution_input_depth"             :   40,
+        "GCNConvMid_size"                     :   12,
+        "GCNConvEnd_size"                     :   6,
+        "alpha_gamma_larger_KL"               :   1.0,
+        "TC_b"                                :   2.0
+    },
+    "decoder_parameters": {
+        "hidden_layers_sizes"                 :   [300,1000,4000],
+        "z_dim"                               :   64,
+        "dropout_proba"                       :   0.1,
+        "convolve_output"                     :   true,
+        "convolution_output_depth"            :   40, 
+        "num_tiles_sparsity"                  :   0,
+        "logit_sparsity_p"                    :   0
+    },
+    "training_parameters": {
+        "num_training_steps"                :   10000,
+        "annealing_warm_up"                 :   2000,
+        "log_training_freq"                 :   1000,
+        "test_model_by_num_samples"         :   1000,
+        "save_model_params_list"            :   [7000, 10000],
+        "learning_rate"                     :   2e-5,
+        "batch_size"                        :   256,
+        "kl_global_params_scale"            :   1.0,
+        "l2_regularization"                 :   1e-4
+    }
+}
+
+

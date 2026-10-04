@@ -1,0 +1,85 @@
+
+==============================================================================
+CELL 3  (execution_count=4)
+==============================================================================
+Shape: (65346, 30)
+Unique antibodies: 8
+Antibodies: <ArrowStringArray>
+['17C7', 'CR4098', 'CR57', 'CTB012', 'RVA122', 'RVC20', 'RVC58', 'RVC68']
+Length: 8, dtype: str
+
+--- Rows for mutation F-2A ---
+      antibody mutation  escape_mean
+0         17C7     F-2A     0.376300
+8206    CR4098     F-2A     0.296400
+16272     CR57     F-2A    -0.014410
+24479   CTB012     F-2A    -0.006509
+32709   RVA122     F-2A    -0.240000
+40907    RVC20     F-2A     0.004527
+49072    RVC58     F-2A    -0.008378
+57203    RVC68     F-2A     0.051290
+
+--- Rows per mutation (first 5 mutations) ---
+mutation
+A103C    8
+A103D    8
+A103E    8
+A103F    8
+A103G    8
+dtype: int64
+
+escape_mean values for F-2A: [0.3763, 0.2964, -0.01441, -0.006509, -0.24, 0.004527, -0.008378, 0.05129]
+All identical? False  (should be False)
+
+
+==============================================================================
+CELL 4  (execution_count=5)
+==============================================================================
+Original shape: (65346, 30)
+After filtering signal peptide + NaN: (65045, 30)
+Positive rate: 0.07105849796294873
+
+Antibodies: ['17C7', 'CR4098', 'CR57', 'CTB012', 'RVA122', 'RVC20', 'RVC58', 'RVC68']
+
+============================================================
+EXP 1: RANDOM PREDICTOR
+============================================================
+  Random                    AUROC=0.4956  AUPRC=0.0706
+  Random                    AUROC=0.4956  AUPRC=0.0706
+
+============================================================
+EXP 2: SEQUENCE SIMILARITY PREDICTOR
+============================================================
+  Sequence similarity       AUROC=0.5435  AUPRC=0.0793
+  SeqSim                    AUROC=0.5435  AUPRC=0.0793
+
+============================================================
+EXP 3: XGBOOST (one-hot mutation + position)
+============================================================
+  17C7     AUROC=0.7087  AUPRC=0.1459
+  CR4098   AUROC=0.7542  AUPRC=0.1297
+  CR57     AUROC=0.6664  AUPRC=0.1028
+  CTB012   AUROC=0.6516  AUPRC=0.1894
+  RVA122   AUROC=0.7516  AUPRC=0.1420
+  RVC20    AUROC=0.7025  AUPRC=0.1447
+  RVC58    AUROC=0.7368  AUPRC=0.1410
+  RVC68    AUROC=0.6611  AUPRC=0.1083
+
+  Mean XGBoost AUROC: 0.7041
+  Mean XGBoost AUPRC: 0.1380
+
+============================================================
+SUMMARY
+============================================================
+Baseline                  AUROC      AUPRC     
+---------------------------------------------
+Random                    0.4956     0.0706    
+SeqSim                    0.5435     0.0793    
+XGBoost (mean)            0.7041     0.1380    
+
+
+==============================================================================
+CELL 5  (execution_count=6)
+==============================================================================
+✅ Baseline results saved.
+
