@@ -1,0 +1,44 @@
+{
+  "Site I (lateral loop, ~223-231)": {
+    "n_test": 1348,
+    "n_train": 63697,
+    "A_auroc": 0.6155294202826411,
+    "B_auroc": 0.6446465176684602,
+    "persite_auroc": 0.5
+  },
+  "Site II (~34-42)": {
+    "n_test": 1382,
+    "n_train": 63663,
+    "A_auroc": 0.5932778658214474,
+    "B_auroc": 0.5978473322768092,
+    "persite_auroc": 0.5
+  },
+  "Site III (~330-338)": {
+    "n_test": 1360,
+    "n_train": 63685,
+    "A_auroc": 0.5702749399038461,
+    "B_auroc": 0.49719968616452986,
+    "persite_auroc": 0.5
+  },
+  "Site IV (~251-255)": {
+    "n_test": 751,
+    "n_train": 64294,
+    "A_auroc": 0.726190476190476,
+    "B_auroc": 0.8211095439586271,
+    "persite_auroc": 0.5
+  },
+  "Fusion loop (~143-145)": {
+    "n_test": 443,
+    "n_train": 64602,
+    "A_auroc": 0.5380792853154661,
+    "B_auroc": 0.4335566722501396,
+    "persite_auroc": 0.5
+  },
+  "Consensus top-10 sites": {
+    "n_test": 1503,
+    "n_train": 63542,
+    "A_auroc": 0.4899277285163332,
+    "B_auroc": 0.4273885848963312,
+    "persite_auroc": 0.5
+  }
+}
