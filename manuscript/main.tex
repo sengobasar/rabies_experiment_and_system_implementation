@@ -1,0 +1,1137 @@
+\documentclass[12pt]{article}
+
+% ---------- PAGE SETUP ----------
+\usepackage[a4paper,margin=1in]{geometry}
+\usepackage{microtype}
+\raggedbottom
+
+% ---------- PACKAGES ----------
+\usepackage{graphicx}
+\graphicspath{{figures/}}
+\usepackage{float}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{booktabs}
+\usepackage{cite}
+\usepackage[font=small,labelfont=bf]{caption}
+\usepackage{titlesec}
+\usepackage{hyperref}
+\hypersetup{hidelinks}
+
+% ---------- SECTION FORMATTING ----------
+\titleformat{\subsection}
+  {\normalfont\normalsize\bfseries}
+  {\thesubsection}{1em}{}
+\titleformat{\subsubsection}
+  {\normalfont\normalsize\itshape}
+  {\thesubsubsection}{1em}{}
+
+% ---------- PARAGRAPH FORMATTING ----------
+\setlength{\parskip}{0.5em}
+\setlength{\parindent}{0pt}
+
+% ---------- TITLE ----------
+\title{A Conceptual Framework for Early Mental Health Risk Detection Using
+Conversational Multimodal Elicitation, Consistency Modeling, and
+Statistical Baseline Calibration}
+\author{Sengo Basar}
+\date{February 2026}
+
+\begin{document}
+
+\maketitle
+
+% =====================================================================
+\begin{abstract}
+Depression and anxiety frequently remain undetected until they reach an
+advanced stage, and existing screening approaches are limited in
+complementary ways: clinical instruments are costly and depend on
+self-report, while single-modality computational models cannot capture
+the distributed nature of mental-health signals. A central difficulty is
+the discrepancy between what a person explicitly reports and what their
+language, voice, face, and behaviour implicitly reveal.
+
+This paper proposes---but does not yet empirically evaluate---a
+conversational multimodal framework that treats that discrepancy as a
+first-class measurement rather than as noise. The framework specifies
+three components. First, a finite state machine (FSM) interview engine
+comprising eight clinical modules, grouped into five thematic domains,
+that would elicit explicit ordinal self-reports alongside implicit
+linguistic, facial, speech, and behavioural features. Second, a dual
+elicitation consistency model that projects implicit representations
+into the explicit feature space and quantifies their disagreement as a
+consistency score $C$. Third, a statistical baseline layer that
+positions session-level risk and response latency relative to a
+population distribution through z-score normalization.
+
+We argue on design grounds that $C$ should be treated as a reliability
+signal rather than as an additive severity term. A discrepancy measure
+has no inherent clinical direction, and if $C$ also enters the feature
+vector, an additive term double-counts it. The paper therefore specifies
+a reliability-gated decision rule and states four falsifiable hypotheses
+for future evaluation. Ethical requirements, including an immediate
+escalation pathway for disclosed suicidal ideation, are specified in
+full. No experimental results are reported; a complete evaluation
+protocol is proposed instead.
+\end{abstract}
+
+\noindent\textbf{Keywords:} Multimodal AI, Mental Health, Speech Analysis,
+Facial Emotion, Risk Detection, Consistency Modeling, Dual Elicitation,
+Response Bias, Statistical Baseline, Anomaly Detection, Z-Score
+Normalization, Valence--Arousal, Dimensional Emotion Modeling, Conceptual
+Framework
+
+% =====================================================================
+\section{Introduction}
+
+Mental health conditions are difficult to detect because their
+presentation is heterogeneous, nonlinear, and frequently masked.
+According to the World Health Organization, approximately one in eight
+people---roughly 970 million individuals in 2019---lived with a mental
+disorder~\cite{who2022wmhr}. More than 720{,}000 people die by suicide
+each year, and suicide is the third leading cause of death among
+individuals aged 15--29~\cite{who2024suicide}. Depression and anxiety
+are also estimated to cost the global economy approximately 12 billion
+working days annually~\cite{who2022work}. Because early intervention
+substantially improves outcomes, detection at the earliest feasible
+stage is a public-health priority.
+
+Current approaches fall short in three distinct ways. First, clinical
+instruments such as structured interviews and validated questionnaires
+are accurate but expensive, require trained administration, and depend
+entirely on what the respondent is willing or able to report. Second,
+most computational systems rely on a single modality---text, speech, or
+facial expression---even though the relevant signal is distributed
+across modalities rather than localised in any one of them. Third, and
+most importantly for this work, existing systems do not explicitly
+model \emph{disagreement} between signals. When a respondent says ``I am
+fine'' while their language becomes more absolutist, their speech slows,
+and their facial expressivity flattens, the conflict itself carries
+information. Conventional fusion architectures treat such conflict as
+noise to be averaged away.
+
+We distinguish two kinds of evidence. \emph{Explicit} evidence is what
+the individual consciously and intentionally reports: ordinal responses
+to structured questions gathered through a branching conversational
+interface. \emph{Implicit} evidence is what the system infers from
+behaviour---linguistic markers, response latency, prosody, and facial
+dynamics---and is more difficult to deliberately control. We define the
+\emph{consistency score} $C$ as the discrepancy between the two
+representations. A large $C$ indicates that the individual's explicit
+account and implicit behaviour diverge, which is consistent with social
+desirability bias, emotional masking, or limited insight.
+
+This paper makes three design contributions.
+\begin{enumerate}
+  \item \textbf{A dual-elicitation conversational architecture.} An
+        FSM-based interview engine with eight clinical modules, grouped
+        into five thematic domains, designed to collect explicit
+        self-report and implicit multimodal evidence within a single
+        structured interaction.
+  \item \textbf{Consistency modeling as a first-class signal.} A
+        projection maps implicit features into the explicit feature
+        space, and the residual is quantified as $C$. We separate the
+        \emph{dual role} of $C$---as a potential label-informative
+        signal and as a hypothesised error-predicting reliability
+        index---and argue that these roles must not be conflated in a
+        single additive risk term.
+  \item \textbf{Population-relative statistical calibration.} A
+        baseline layer converts absolute risk and latency into
+        population-relative z-scores, producing interpretable anomaly
+        flags that would route ambiguous or atypical sessions to human
+        review.
+\end{enumerate}
+
+\subsection{Scope and Status of the Claims}
+\label{sec:scope}
+
+This is a \emph{conceptual framework paper}. It presents an
+architecture, a formal notation, a set of design arguments, and a
+falsifiable evaluation plan. \textbf{It reports no experimental
+results.} The speech, facial, and behavioural components are specified
+in full and grounded in public benchmarks, but no joint evaluation has
+been carried out. Wherever an empirical claim would be needed, this
+paper states a hypothesis and identifies the experiment that would test
+it.
+
+We state this up front deliberately. A framework paper is a legitimate
+genre, but it is a different contribution from an empirical study, and
+its claims must be assessed accordingly. Readers seeking validated
+performance figures should treat this work as a specification and
+protocol, not as evidence that the system works.
+
+% =====================================================================
+\section{Related Work}
+
+\subsection{Text-Based Approaches}
+
+Coppersmith et al.~\cite{coppersmith2015mental} demonstrated that
+self-disclosed mental-health diagnoses on Twitter can be classified from
+language using NLP features and supervised models. Their work established
+that linguistic markers carry detectable signal, but it remained
+text-only and relied on voluntary public disclosure of diagnosis.
+General-purpose contextual encoders such as BERT~\cite{devlin2019bert}
+and RoBERTa~\cite{liu2019roberta} substantially improved text
+representation learning and are used here as \emph{encoders}, not as
+mental-health models in their own right; neither incorporates
+non-linguistic signal. DistilBERT~\cite{sanh2019distilbert} retains most
+of BERT's task performance at a fraction of the inference cost and is
+the encoder proposed for this framework.
+
+\subsection{Speech-Based Analysis}
+
+The Distress Analysis Interview Corpus (DAIC-WOZ) was introduced by
+Gratch et al.~\cite{gratch2014daic} as a corpus of clinical interviews
+with associated depression severity labels. Alhanai et
+al.~\cite{alhanai2018daic} subsequently showed that audio and text
+sequence models over DAIC-WOZ can detect depression, but the approach
+did not integrate facial or behavioural evidence. We cite the corpus and
+the modelling work separately to avoid attributing the dataset to the
+modelling study.
+
+\subsection{Physiological and EEG-Based Systems}
+
+Picard~\cite{picard1997affective} established affective computing as a
+field, arguing that affect should be treated as an input signal amenable
+to computational modelling. Koelstra et al.~\cite{koelstra2012deap}
+released DEAP, a widely used physiological benchmark for emotion
+analysis that has supported SVM, random forest, and CNN baselines.
+Physiological sensing nonetheless requires specialised hardware (EEG
+headsets, wearable sensors), which limits deployment for low-cost
+screening. Russell~\cite{russell1980circumplex} proposed the
+circumplex model, representing affect on continuous valence and arousal
+axes rather than as discrete categories; this representation underlies
+the facial component of the present framework.
+
+\subsection{Facial Emotion Recognition}
+
+Goodfellow et al.~\cite{goodfellow2013fer} released FER2013, an early
+large-scale benchmark of 35{,}887 grayscale facial images annotated with
+seven emotion classes. Mollahosseini et
+al.~\cite{mollahosseini2017affectnet} introduced AffectNet, which added
+continuous valence and arousal annotations for in-the-wild images and
+therefore supports dimensional rather than purely categorical modelling.
+Facial action units, grounded in the Facial Action Coding
+System~\cite{ekman1978facs}, provide an alternative descriptive
+vocabulary. Kossaifi et al.~\cite{kossaifi2019action} explored action
+unit representations on AU-annotated datasets such as BP4D and DISFA,
+producing richer descriptors than discrete labels; that line of work
+remains facial-only and does not incorporate speech or behaviour.
+
+\subsection{Multimodal Fusion}
+
+Baltru\v{s}aitis et al.~\cite{baltrusaitis2018multimodal} provided the
+taxonomy of multimodal machine learning---representation, translation,
+alignment, fusion, and co-learning---that organises much of the
+subsequent literature. Tensor Fusion Network~\cite{zadeh2017tensor} is a
+representative fusion architecture: it models unimodal, bimodal, and
+trimodal interactions through an outer product of modality embeddings.
+Such architectures assume that modalities are aligned and mutually
+reinforcing; disagreement between modalities is treated as noise rather
+than as a measurable quantity. MODMA~\cite{liu2022modma} and
+related efforts supply clinically collected multimodal data for
+depression analysis, while Xu et al.~\cite{xu2025multimodal} fuse BERT
+text features with Wav2Vec~2.0 speech features for depression
+prediction; their contribution is a better fusion layer, not a model of
+agreement or disagreement.
+
+\subsection{Consistency, Response Bias, and Masking}
+
+The discrepancy between self-report and inferred state has a long
+history in psychological measurement. Social desirability
+bias---the tendency to present oneself favourably---was formalised by
+Crowne and Marlowe~\cite{crowne1960social} and remains a documented
+source of error in self-report instruments. In the mental-health
+context, the same phenomenon appears as emotional masking or
+minimisation. Computational systems typically either ignore this
+discrepancy or treat it as label noise. We are not aware of a widely
+adopted framework that quantifies explicit--implicit inconsistency as
+an explicit, inspectable feature and then uses it to modulate
+confidence.
+
+\subsection{Research Gap}
+\label{sec:gap}
+
+Three gaps motivate this work. (i) \emph{Inconsistency is not modeled.}
+Fusion architectures optimise agreement; they do not represent
+disagreement as an outcome of interest. (ii) \emph{Global coordination
+is absent.} Single-modality and simple fusion models still lack a
+mechanism that reconciles evidence across modalities at a session
+level. (iii) \emph{Statistical grounding is missing.} Most systems
+report an absolute score with no reference to a population distribution,
+so a given score cannot be interpreted as typical or atypical for a
+comparable individual. Figure~\ref{fig:research_gap} summarises these
+gaps against the reviewed literature.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=\textwidth]{new.png}
+    \caption{Research gap analysis across mental-health detection
+    approaches. Text-only, speech-only, physiological, and facial
+    systems each leave inconsistency modeling and population-relative
+    calibration unaddressed; fusion systems optimise agreement rather
+    than representing disagreement.}
+    \label{fig:research_gap}
+\end{figure}
+
+% =====================================================================
+\section{Methodology}
+
+\subsection{System Overview}
+
+Figure~\ref{fig:architecture} shows the proposed end-to-end data flow. A
+user completes the FSM interview three times. Repeated administration is
+deliberate: a single session may reflect a transient state, whereas
+patterns that recur across sessions are more likely to be stable and
+therefore more trustworthy as evidence. Each session would yield a set
+of modality-specific feature vectors, a consistency score, and a
+calibrated risk estimate.
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.95\linewidth]{dg.png}
+\caption{Proposed system architecture. The FSM interviewing engine
+collects explicit self-reports and implicit multimodal evidence;
+features are fused into a joint vector; the consistency score $C$ is
+computed in feature space; population-relative z-score calibration
+situates the session against a reference distribution; and the
+reliability gate routes high-$C$ or statistically anomalous sessions to
+human review.}
+\label{fig:architecture}
+\end{figure}
+
+\subsection{Data Sources and Evaluation Cohorts}
+\label{sec:data}
+
+The framework draws on two qualitatively different kinds of data, and we
+keep their roles strictly separate.
+
+\paragraph{Target deployment data.} In deployment, all modalities would
+be collected in a single consented session: ordinal self-reports,
+free-text responses, audio, and facial video, together with behavioural
+logs from the FSM engine.
+
+\paragraph{Component grounding benchmarks.} No single public dataset
+provides all four modalities under one protocol. The speech component is
+therefore specified against DAIC-WOZ~\cite{gratch2014daic}, which
+supplies clinical interview audio and transcripts with depression
+severity labels, and MODMA~\cite{liu2022modma}, which supplies
+clinically collected voice recordings with emotional-state annotations.
+The publicly distributed DAIC-WOZ release provides audio and transcripts
+rather than raw facial video; consequently the facial component is
+grounded separately in FER2013~\cite{goodfellow2013fer} and
+AffectNet~\cite{mollahosseini2017affectnet}. AffectNet provides over
+450{,}000 in-the-wild images annotated with both discrete emotion labels
+and continuous valence--arousal values, which is what makes dimensional
+modelling feasible. Text representations can be trained or fine-tuned on
+the transcripts available in DAIC-WOZ and MODMA.
+
+These benchmarks inform component design and extractor selection. They
+do not constitute a joint multimodal evaluation, and the absence of a
+single corpus containing all modalities is itself a constraint on the
+evaluation plan (Section~\ref{sec:evaluation}).
+
+\paragraph{Behavioural data.} Per-question response latency, session
+duration, interaction count, and ordinal self-report values would be
+logged by the FSM engine itself.
+
+\subsection{Dual Elicitation Design}
+
+\subsubsection{The Interview Engine}
+
+The engine is a finite state machine
+\begin{equation}
+\pi = (s_0,\; s_1,\; \ldots,\; s_T), \qquad s_T \in F,
+\end{equation}
+where each transition is conditioned on the preceding response. The
+interview comprises \textbf{eight clinical modules} organised into
+\textbf{five thematic domains} (Table~\ref{tab:modules}). Branching
+logic concentrates follow-up questions where the preceding answer
+indicates elevated concern; for example, a response indicating marked
+social isolation triggers additional loneliness-focused items. The
+collection of modalities is
+\begin{equation}
+S = S_{\text{text}} \cup S_{\text{speech}} \cup S_{\text{behaviour}}
+    \cup S_{\text{facial}} \cup S_{\text{consistency}}.
+\end{equation}
+
+\begin{table}[H]
+\centering
+\caption{Interview structure: eight clinical modules across five
+thematic domains.}
+\label{tab:modules}
+\begin{tabular}{@{}ll@{}}
+\toprule
+Thematic domain & Clinical modules \\
+\midrule
+Physical well-being & Sleep; health \\
+Mood and stress     & Mood; stress \\
+Social and self     & Social; self \\
+Functioning         & Study \\
+Safety              & Safety \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\subsubsection{Phase 1: Structured Elicitation (Explicit Features)}
+
+\begin{equation}
+\mathbf{x}^{\text{explicit}} = \bigl[\, x_{\text{sleep}},\; x_{\text{mood}},\;
+x_{\text{stress}},\; x_{\text{social}},\; x_{\text{self}},\;
+x_{\text{study}},\; x_{\text{health}},\; x_{\text{safety}} \,\bigr]^{\top}
+\in \mathbb{R}^{m}, \quad m = 8.
+\end{equation}
+
+\noindent These values encode what the user \emph{consciously reports} via
+normalised ordinal scale responses.
+
+\subsubsection{Phase 2: Conversational Elicitation (Implicit Features)}
+
+\begin{equation}
+\mathbf{x}^{\text{implicit}} = \bigl[\, \mathbf{e}_{\text{embed}},\;
+x_{\text{sent}},\; x_{\text{self\_ref}},\; x_{\text{dist}},\;
+x_{\text{intensity}} \,\bigr]^{\top} \in \mathbb{R}^{k},
+\end{equation}
+
+\noindent where $\mathbf{e}_{\text{embed}} \in \mathbb{R}^{768}$ and
+$k = 772$. These values encode what the user's language and behaviour
+\emph{implicitly reveal}, independent of conscious self-report.
+Table~\ref{tab:vectors} summarises the modality vectors and their
+dimensionality.
+
+\begin{table}[H]
+\centering
+\caption{Modality-specific feature vectors. Speech dimensionality depends
+on the selected openSMILE feature set.}
+\label{tab:vectors}
+\begin{tabular}{@{}llc@{}}
+\toprule
+Modality & Features & Dimension \\
+\midrule
+Explicit self-report & Eight ordinal clinical dimensions & 8 \\
+Implicit text & DistilBERT CLS, VADER, self-reference, distortion, intensity & 772 \\
+Facial & $\bar{V}$, $\bar{A}$, $\bar{D}$, EAR, MAR & 5 \\
+Behavioural & Mean latency, latency SD, session duration, questions answered & 4 \\
+Speech & MFCCs, pitch, jitter, shimmer, energy & variable \\
+Consistency & Score $C$ and its cosine variant $C_{\cos}$ & 2 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\subsection{Consistency Modeling}
+\label{sec:consistency}
+
+\subsubsection{Learned Projection}
+
+A linear map $\phi:\mathbb{R}^{k}\rightarrow\mathbb{R}^{m}$ projects
+implicit features into the explicit feature space:
+\begin{equation}
+\hat{\mathbf{x}}^{\text{explicit}}
+= \phi\bigl(\mathbf{x}^{\text{implicit}}\bigr)
+= \mathbf{W}\,\mathbf{x}^{\text{implicit}} + \mathbf{b},
+\qquad \mathbf{W}\in\mathbb{R}^{m\times k},\; \mathbf{b}\in\mathbb{R}^{m},
+\end{equation}
+trained by least squares:
+\begin{equation}
+\mathcal{L}_{\phi}
+= \left\| \mathbf{x}^{\text{explicit}}
+        - \phi\bigl(\mathbf{x}^{\text{implicit}}\bigr) \right\|_{2}^{2}.
+\end{equation}
+
+In an initial implementation, $\phi$ could be initialised heuristically
+before being fitted. For example, the mood dimension might be estimated
+as
+\begin{equation}
+\hat{x}_{\text{mood}}
+= w_{1}\,x_{\text{sent}} + w_{2}\,x_{\text{self\_ref}}
++ w_{3}\,x_{\text{dist}} + b .
+\end{equation}
+
+\subsubsection{Inconsistency Score}
+
+\begin{equation}
+C = \left\| \mathbf{x}^{\text{explicit}}
+        - \hat{\mathbf{x}}^{\text{explicit}} \right\|_{2}
+= \sqrt{\sum_{i=1}^{m}\bigl(x_i^{\text{explicit}}
+        - \hat{x}_i^{\text{explicit}}\bigr)^{2}} .
+\end{equation}
+
+\noindent A cosine-based variant that is insensitive to vector magnitude is
+\begin{equation}
+C_{\cos} = 1
+- \frac{\mathbf{x}^{\text{explicit}} \cdot \hat{\mathbf{x}}^{\text{explicit}}}
+       {\left\|\mathbf{x}^{\text{explicit}}\right\|_{2}\,
+        \left\|\hat{\mathbf{x}}^{\text{explicit}}\right\|_{2}} .
+\end{equation}
+
+A large $C$ indicates that linguistic responses contradict numerical
+self-reports, which is consistent with emotional masking or social
+desirability bias~\cite{crowne1960social}.
+
+\subsection{Feature Extraction}
+
+\subsubsection{Text Features}
+
+\emph{Semantic embedding.} DistilBERT~\cite{sanh2019distilbert} provides
+a six-fold inference speed advantage over BERT while retaining most of
+its task performance:
+\begin{equation}
+\mathbf{e}_{\text{embed}} = \text{DistilBERT}(\text{response})[\texttt{CLS}]
+\in \mathbb{R}^{768}.
+\end{equation}
+
+\emph{Sentiment polarity.} VADER~\cite{hutto2014vader} returns a
+compound polarity score:
+\begin{equation}
+x_{\text{sent}} = \text{VADER}(\text{response}) \in [-1,\,1].
+\end{equation}
+
+\emph{Self-reference ratio.} Elevated first-person singular usage is an
+established linguistic marker of depressive
+rumination~\cite{coppersmith2015mental}:
+\begin{equation}
+x_{\text{self\_ref}}
+= \frac{\text{count(first-person singular pronouns)}}
+       {N_{\text{words}}} .
+\end{equation}
+
+\emph{Cognitive distortion score.} Absolutist terms such as ``always'',
+``never'', ``nothing'', and ``completely'' are detected via a predefined
+lexicon:
+\begin{equation}
+x_{\text{dist}}
+= \frac{\text{count(distortion keywords)}}{N_{\text{words}}} .
+\end{equation}
+
+\noindent The implicit vector is therefore
+$\mathbf{x}^{\text{implicit}}\in\mathbb{R}^{772}$. The distortion and
+self-reference terms capture clinical signal that sentiment polarity
+alone does not.
+
+\subsubsection{Facial Features via Dimensional Emotion Modeling}
+
+Discrete categorical labels cannot represent continuously graded
+affective states, which limits their usefulness for screening. Following
+Russell's circumplex model~\cite{russell1980circumplex} as operationalised
+in AffectNet~\cite{mollahosseini2017affectnet}, the facial component maps
+CNN emotion probabilities onto continuous valence and arousal and
+derives a distress index.
+
+\emph{Emotion probability distribution.} A CNN outputs a softmax
+distribution over $K=8$ categories:
+\begin{equation}
+P(\text{emotion}_i) = \frac{e^{z_i}}{\sum_{j=1}^{K} e^{z_j}},
+\qquad \sum_{i=1}^{K} P(\text{emotion}_i) = 1,
+\end{equation}
+where $i \in \{\text{happy, sad, anger, fear, surprise, disgust, neutral,
+contempt}\}$.
+
+\emph{Valence.} Valence $V\in[-1,1]$ encodes the positivity of the
+expressed state:
+\begin{equation}
+V = \sum_{i=1}^{K} P(\text{emotion}_i)\,w_V(\text{emotion}_i).
+\end{equation}
+
+\emph{Arousal.} Arousal $A\in[-1,1]$ encodes activation intensity:
+\begin{equation}
+A = \sum_{i=1}^{K} P(\text{emotion}_i)\,w_A(\text{emotion}_i).
+\end{equation}
+
+\noindent The weights $w_V$ and $w_A$ are \textbf{heuristic priors}
+chosen to respect the circumplex ordering of each category; they are
+not regression coefficients estimated from AffectNet's continuous
+annotations. The values proposed for the initial implementation are:
+$w_V(\text{happy})=+1.0$, $w_V(\text{surprise})=+0.4$,
+$w_V(\text{neutral})=0.0$, $w_V(\text{contempt})=-0.7$,
+$w_V(\text{sad})=-0.7$, $w_V(\text{fear})=-0.8$,
+$w_V(\text{anger})=-0.9$, $w_V(\text{disgust})=-0.95$; and
+$w_A(\text{fear})=+0.9$, $w_A(\text{anger})=+0.8$,
+$w_A(\text{surprise})=+0.7$, $w_A(\text{happy})=+0.6$,
+$w_A(\text{contempt})=+0.3$, $w_A(\text{neutral})=0.0$,
+$w_A(\text{disgust})=-0.2$, $w_A(\text{sad})=-0.3$. These priors are a
+design choice, and Section~\ref{sec:limitations} records them as a
+limitation.
+
+\emph{Distress index.} A per-frame distress score combines negative
+valence with activation magnitude:
+\begin{equation}
+D = (1 - V)\,|A| .
+\end{equation}
+
+\noindent For fear ($V=-0.8$, $A=0.9$), $D = 1.62$; for anger
+($V=-0.9$, $A=0.8$), $D = 1.52$; for sadness ($V=-0.7$, $A=-0.3$),
+$D = 0.51$; for happiness ($V=+1.0$, $A=+0.6$) and neutrality
+($V=0$, $A=0$), $D = 0$.
+
+This formulation has an important limitation that we state explicitly:
+$D$ collapses to zero both for genuinely positive affect and for flat
+or blunted affect. It therefore \emph{cannot} by itself distinguish a
+calm individual from one exhibiting emotional blunting. We do not claim
+otherwise. A candidate discriminator---session-level expressivity
+variance, $\sigma_V$ and $\sigma_A$ computed over the session---is
+identified in Section~\ref{sec:future} but is not validated here. The
+distress index should be read as a measure of negative high-arousal
+affect, not as a measure of flatness.
+
+\emph{Temporal smoothing.} Single-frame predictions are noisy; a sliding
+window of $N$ frames is maintained:
+\begin{equation}
+\bar{V} = \frac{1}{N}\sum_{n=1}^{N}V_n, \qquad
+\bar{A} = \frac{1}{N}\sum_{n=1}^{N}A_n, \qquad
+\bar{D} = \frac{1}{N}\sum_{n=1}^{N}D_n .
+\end{equation}
+
+\noindent A default window of $N=30$ frames (approximately one second at
+30\,FPS) is proposed to suppress single-frame misclassification while
+preserving genuine transitions.
+
+\emph{Micro-behavioural features.} MediaPipe
+FaceMesh~\cite{lugaresi2019mediapipe} provides facial landmarks from
+which the eye aspect ratio (EAR) and mouth aspect ratio (MAR) are
+computed:
+\begin{equation}
+\text{EAR} = \frac{\lVert p_{\text{upper}} - p_{\text{lower}}\rVert_{2}}
+                 {\lVert p_{\text{left}} - p_{\text{right}}\rVert_{2}},
+\qquad
+\text{MAR} = \frac{d_{\text{upper--lower lip}}}
+                  {d_{\text{mouth corner distance}}} .
+\end{equation}
+
+\emph{Session-level facial vector.}
+\begin{equation}
+\mathbf{x}^{\text{face}} = \bigl[\,\bar{V},\; \bar{A},\; \bar{D},\;
+\text{EAR},\; \text{MAR}\,\bigr]^{\top} \in \mathbb{R}^{5}.
+\end{equation}
+
+\subsubsection{Speech Features}
+
+Speech would be analysed with librosa~\cite{mcfee2015librosa} and
+openSMILE~\cite{eyben2010opensmile} to obtain MFCCs, pitch, jitter,
+shimmer, and energy. These prosodic and spectral features enter the
+implicit space. Feature selection is informed by the acoustic analyses
+reported on DAIC-WOZ~\cite{gratch2014daic,alhanai2018daic} and
+MODMA~\cite{liu2022modma}.
+
+\subsubsection{Behavioural Features}
+
+\begin{equation}
+\mathbf{x}^{\text{behavior}}
+= \bigl[\,\bar{L},\; \sigma^{\text{sess}}_{L},\; D_{s},\; Q\,\bigr]^{\top}
+\in \mathbb{R}^{4},
+\end{equation}
+where
+\begin{equation}
+\bar{L} = \frac{1}{T}\sum_{t=1}^{T}L_t,
+\qquad
+\sigma^{\text{sess}}_{L}
+= \sqrt{\frac{1}{T}\sum_{t=1}^{T}\bigl(L_t - \bar{L}\bigr)^{2}} ,
+\end{equation}
+$L_t$ is the response latency for question $t$,
+$D_{s}$ is total session duration, and $Q$ is the number of questions
+answered. We use $L$ for latency throughout and reserve $\lambda$ for
+no other purpose. All features are standardised prior to fusion.
+
+\subsection{Feature Fusion and Risk Estimation}
+
+\subsubsection{Early Fusion}
+
+All modality vectors are concatenated before risk estimation:
+\begin{equation}
+\mathbf{x}^{\text{fused}}
+= \bigl[\,\mathbf{x}^{\text{explicit}},\; \mathbf{x}^{\text{implicit}},\;
+\mathbf{x}^{\text{face}},\; \mathbf{x}^{\text{speech}},\;
+\mathbf{x}^{\text{behavior}}\,\bigr]^{\top}.
+\end{equation}
+
+\noindent Because $C$ is a function of the same features, including it
+here would duplicate information and complicate the interpretation of
+the gate. It is therefore computed separately and excluded from
+$\mathbf{x}^{\text{fused}}$.
+
+\subsubsection{Base Risk Estimate}
+
+\emph{Initial phase (weighted linear combination).}
+\begin{equation}
+r = w_{1}\,\bar{x}^{\text{explicit}}
+  + w_{2}\,\bar{x}^{\text{behavior}}
+  + w_{3}\,\bar{D},
+\qquad
+\bar{x}^{\text{explicit}} = \frac{1}{m}\sum_{i=1}^{m}x_i^{\text{explicit}},
+\label{eq:linear-risk}
+\end{equation}
+with $w_{1}=0.55$, $w_{2}=0.25$, $w_{3}=0.20$. These weights are
+starting heuristics and are replaced by a learned model in the second
+phase.
+
+\emph{Second phase (learned risk models).} XGBoost~\cite{chen2016xgboost}
+is proposed as the primary learner; random forest as the baseline, and
+LightGBM as an alternative comparison. The learned estimate is
+$\hat{r} = f(\mathbf{x}^{\text{fused}})$, and a PCA projection
+$\mathbf{z} = \text{PCA}(\mathbf{x}^{\text{fused}})$ is proposed for
+diagnostic visualisation.
+
+\subsubsection{Decision Rule}
+
+The final decision combines the point estimate, the reliability index,
+and the statistical baseline (Section~\ref{sec:baseline}):
+\begin{equation}
+\text{escalate}(i) =
+\mathbb{1}\bigl[\,C_i > \tau_C \;\lor\; |Z_{R,i}| > 2
+\;\lor\; |Z_{L,i}| > 2 \;\lor\; \text{safety}_i = 1\,\bigr].
+\label{eq:decision}
+\end{equation}
+
+\noindent The reported output would be the pair $\bigl(\hat{r}_i,
+\hat{\rho}(C_i)\bigr)$ together with the escalation flag. The point
+estimate is never inflated by an inconsistency penalty.
+
+\subsubsection{Planned Extension: Prediction-Level Divergence}
+\label{sec:divergence}
+
+The present consistency score operates in \emph{feature space}. A natural
+extension assigns each modality its own risk estimate and measures
+disagreement in \emph{prediction space}: $D_{ET}$ between explicit and
+text-implicit predictions, $D_{EF}$ between explicit and facial
+predictions, and $D_{TF}$ between text and facial predictions. This
+would allow conflict to be localised to specific modalities rather than
+reported as a single scalar. It is not developed here.
+
+\subsection{Statistical Baseline Modeling and Anomaly Detection}
+\label{sec:baseline}
+
+\subsubsection{Population Distribution}
+
+For $N$ reference sessions with risk estimates $R_i$ and mean response
+latencies $\bar{L}_i$:
+\begin{equation}
+\mu_R = \frac{1}{N}\sum_{i=1}^{N}R_i,
+\qquad
+\sigma_R = \sqrt{\frac{1}{N}\sum_{i=1}^{N}\bigl(R_i - \mu_R\bigr)^{2}},
+\end{equation}
+\begin{equation}
+\mu_L = \frac{1}{N}\sum_{i=1}^{N}\bar{L}_i,
+\qquad
+\sigma^{\text{pop}}_{L}
+= \sqrt{\frac{1}{N}\sum_{i=1}^{N}\bigl(\bar{L}_i - \mu_L\bigr)^{2}} .
+\end{equation}
+
+\noindent The reference distribution would be estimated empirically from
+a reference cohort. No synthetic population is assumed; a small
+reference cohort would yield unstable $\mu$ and $\sigma$ estimates, which
+Section~\ref{sec:limitations} records as a limitation.
+
+\subsubsection{Z-Score Normalization}
+
+\begin{equation}
+Z_R = \frac{R_i - \mu_R}{\sigma_R},
+\qquad
+Z_L = \frac{\bar{L}_i - \mu_L}{\sigma^{\text{pop}}_{L}} .
+\end{equation}
+
+\noindent Z-scores provide the population-relative context that absolute
+scores lack: a given score is interpretable only against what is typical
+for comparable sessions.
+
+\subsubsection{Towards Personalised Baselines}
+
+A population baseline cannot distinguish between-subject from
+within-subject variation. An individual who is habitually quiet may be
+entirely typical for themselves while deviating from the population. The
+planned blend is
+\begin{equation}
+S_i = \kappa_i\,\frac{R_i - \mu_R}{\sigma_R}
+    + (1-\kappa_i)\,\frac{R_i - \mu_i}{\sigma_i},
+\end{equation}
+where $\mu_i$ and $\sigma_i$ would be estimated from the individual's
+own longitudinal sessions and $\kappa_i \in [0,1]$ controls the blend.
+$\kappa_i$ is \emph{not} set in this work; the formulation is included to
+fix notation for the planned extension. Note that $\kappa$ is used here
+and nowhere else.
+
+\subsubsection{Anomaly Flags}
+
+A session would be flagged when a z-score exceeds two standard
+deviations, or when consistency is high, or when the safety module is
+positive (Eq.~\ref{eq:decision}). Flagged sessions would be routed to a
+clinically trained reviewer; they would never be auto-diagnosed.
+
+% =====================================================================
+\section{Design Rationale: Consistency as Reliability, Not Severity}
+\label{sec:dualrole}
+
+The most consequential design decision in this framework concerns how
+$C$ enters the risk estimate. We argue for treating $C$ as a
+\emph{reliability} signal rather than as an additive severity term. The
+argument has three parts.
+
+\paragraph{Discrepancy has no inherent clinical direction.} $C$ is an
+unsigned distance between two representations. It increases when a
+respondent under-reports distress while their language suggests
+otherwise---a masking pattern. But it also increases when the
+projection $\phi$ is poorly estimated, when a question is ambiguous,
+when speech extraction is corrupted by noise, or when a respondent
+simply answers carelessly. The same scalar therefore mixes clinically
+meaningful incongruence with measurement error. Mapping $C$ directly
+onto risk requires an assumption that has to be justified, not assumed.
+
+\paragraph{Adding $C$ to risk double-counts it.} If $C$ is also present
+among the fusion features---as it would be under a naive
+implementation---then including it again as an additive term counts the
+same evidence twice. Even if $C$ is excluded from the feature vector,
+an additive term imposes a monotone, unbounded severity interpretation
+on a quantity whose scale depends on the dimensionality and
+normalisation of the explicit space.
+
+\paragraph{A reliability reading is testable and safer.} The framework
+therefore treats $C$ as a hypothesised predictor of estimation error.
+The reliability index is defined as the local accuracy in a
+neighbourhood $\mathcal{B}(C)$ of the consistency score:
+\begin{equation}
+\hat{\rho}(C)
+= \frac{1}{|\mathcal{B}(C)|}
+  \sum_{j\in\mathcal{B}(C)} \mathbb{1}\bigl[\hat{y}_j = y_j\bigr] .
+\end{equation}
+
+\noindent A session is routed to review when
+\begin{equation}
+\text{review}(i) = \mathbb{1}\bigl[\,C_i > \tau_{C}\,\bigr],
+\label{eq:gate}
+\end{equation}
+where $\tau_C$ would be selected on held-out data to trade coverage
+against precision. This preserves the clinically important case in which
+a respondent reports low distress while implicit signals disagree: such
+a session is escalated for human assessment rather than assigned an
+artificially high probability by an additive penalty.
+
+The design makes a strong, falsifiable commitment: if $C$ does not
+predict error (Hypothesis H2, Section~\ref{sec:evaluation}), the
+reliability-gating rationale fails and the mechanism should be
+redesigned or discarded. That is preferable to an additive formulation
+whose contribution cannot be falsified because it always increases the
+score.
+
+% =====================================================================
+\section{Proposed Evaluation Protocol}
+\label{sec:evaluation}
+
+Because this paper reports no results, we specify the study that would
+test the framework. The protocol is intended to be pre-registerable.
+
+\subsection{Hypotheses}
+
+\begin{enumerate}
+  \item[\textbf{H1}] \emph{Label association.} The distribution of $C$
+        differs between individuals with and without a depression
+        indication, with higher $C$ more frequent in the depressed
+        group.
+  \item[\textbf{H2}] \emph{Reliability.} Classification accuracy
+        decreases as $C$ increases, and $C$ predicts per-sample error
+        beyond what class balance explains.
+  \item[\textbf{H3}] \emph{Gating utility.} Gating on $C$ increases
+        precision within the retained subset at a quantifiable cost in
+        coverage, relative to ungated predictions.
+  \item[\textbf{H4}] \emph{Multimodal benefit.} The fused multimodal
+        model outperforms the best single-modality baseline on held-out
+        data.
+\end{enumerate}
+
+H2 is the load-bearing hypothesis: it is the empirical foundation of the
+design decision argued in Section~\ref{sec:dualrole}. H4 is the claim
+most often asserted without support in this literature, and it must be
+tested rather than assumed.
+
+\subsection{Data Requirements}
+
+No single public dataset contains all four modalities under one
+protocol. Two designs are therefore possible. \emph{Design A} evaluates
+each component on its native benchmark and reports component-level
+results only; it cannot test H4. \emph{Design B} collects a new consented
+cohort with a common protocol, which is required to test H4 properly.
+We recommend Design B and treat Design A as an interim step.
+
+\subsection{Splitting and Statistics}
+
+Splits must be \emph{subject-independent}: the same participant must not
+appear in both training and test partitions, since repeated sessions
+from one individual would otherwise leak identity and inflate accuracy.
+We propose repeated stratified $k$-fold cross-validation with multiple
+random seeds, reporting mean $\pm$ standard deviation and confidence
+intervals. Because seed-to-seed variation is itself an estimate,
+inferential claims should use paired tests across folds with effect
+sizes and correction for multiple comparisons. A small number of seeds
+should be reported as exploratory, not confirmatory.
+
+\subsection{Metrics}
+
+Classification performance would be reported as accuracy, precision,
+recall, $F_1$, and area under the ROC curve, with calibration assessed
+by expected calibration error---since the framework claims calibrated
+output, discrimination alone is insufficient. Facial valence and arousal
+would be evaluated with the concordance correlation coefficient used in
+the AffectNet protocol~\cite{mollahosseini2017affectnet}:
+\begin{equation}
+\rho_c =
+\frac{2\rho\,\sigma_{\hat{\theta}}\,\sigma_{\theta}}
+     {\sigma_{\hat{\theta}}^{2} + \sigma_{\theta}^{2}
+      + (\mu_{\hat{\theta}} - \mu_{\theta})^{2}} .
+\end{equation}
+Severity association would use the Spearman rank correlation:
+\begin{equation}
+\rho_s\bigl(C,\,y\bigr)
+= \frac{\operatorname{Cov}\bigl(\mathrm{rank}(C),\,\mathrm{rank}(y)\bigr)}
+       {\sigma_{\mathrm{rank}(C)}\,\sigma_{\mathrm{rank}(y)}} .
+\end{equation}
+
+\subsection{Ablations}
+
+Four configurations would isolate the consistency mechanism:
+(i)~explicit self-report only; (ii)~explicit plus implicit linguistic
+features; (iii)~configuration (ii) plus behavioural features;
+(iv)~configuration (iii) with $C$ used as a reliability gate. A fifth
+configuration using $C$ as an additive penalty would be included
+specifically to test the design argument of Section~\ref{sec:dualrole}.
+Each configuration would report accuracy, $F_1$, and coverage.
+
+\subsection{Clinical Ground Truth}
+
+Screening performance should ultimately be calibrated against
+established instruments---PHQ-9~\cite{kroenke2001phq9} and
+GAD-7~\cite{spitzer2006gad7}---with ROC analysis and threshold selection
+justified on clinical rather than statistical grounds. Agreement with an
+instrument is not the same as clinical validity, and neither substitutes
+for diagnostic assessment.
+
+\subsection{Threats to Validity}
+
+\emph{Dataset shift}: models trained on benchmark corpora may not
+transfer to the deployment population. \emph{Label quality}: public
+Reddit-based labels are self-disclosed and unverified.
+\emph{Demographic bias}: facial and prosodic models are known to vary
+across groups, and the affect priors derive from a predominantly Western
+annotation protocol. \emph{Confounding}: latency and expressivity are
+affected by device, bandwidth, and environment, not only by affect.
+\emph{Construct validity}: $C$ measures representational disagreement,
+which is not the same construct as masking; H1 and H2 test association,
+not the mechanism.
+
+% =====================================================================
+\section{Discussion}
+
+\subsection{What the Framework Contributes}
+
+The framework's contribution is conceptual rather than empirical. It
+does three things that current fusion architectures do not. It makes
+explicit--implicit inconsistency an inspectable quantity rather than an
+implicit assumption of agreement. It separates the question ``how
+severe is this case?'' from ``how much should we trust this estimate?'',
+which are routinely conflated when a single confidence-like score is
+folded into a prediction. And it places an absolute score in a
+population context, so that a result can be described as typical or
+atypical rather than merely high or low.
+
+\subsection{Dimensional Facial Modeling}
+
+The facial component departs from categorical classification by
+representing affect on continuous valence and arousal axes, motivated by
+the circumplex model~\cite{russell1980circumplex} and by AffectNet's
+annotation protocol~\cite{mollahosseini2017affectnet}.
+
+The claim that dimensional modelling distinguishes calm from emotional
+blunting is \emph{not} supported by the present formulation. Both
+states map near $V \approx 0$, $A \approx 0$, and therefore both yield
+$D \approx 0$. What the model captures is negative high-arousal affect
+(fear, anger), and this is what the distress index should be understood
+to measure. Distinguishing blunting would require an additional measure
+of expressivity dynamics, such as session-level $\sigma_V$ and
+$\sigma_A$, which is proposed but untested.
+
+Similarly, the weights $w_V$ and $w_A$ are heuristic priors that respect
+the circumplex ordering of the eight categories. They are not derived
+from AffectNet's continuous annotations and should not be described as
+such. Refitting them by regression against the dimensional targets, and
+evaluating with the concordance correlation coefficient, is future work.
+
+\subsection{Why a Framework Paper Is Appropriate Here}
+
+Multimodal mental-health detection has a replication problem: fusion
+results are frequently reported on benchmarks that do not share a
+protocol with the intended deployment setting, and the architectural
+claims---that more modalities are better, that disagreement is noise---are
+rarely stated precisely enough to be falsified. Specifying the
+architecture and the test before running it is a way of avoiding that
+failure mode. The cost is that this paper provides no evidence that the
+system works. That cost is real and should not be minimised: a framework
+is a proposal, and proposals can be wrong.
+
+% =====================================================================
+\section{Ethical Considerations}
+
+\subsection{Data Governance}
+
+This paper proposes a framework and reports no data collection. Any
+future study would require independent ethics approval, informed
+consent, and a data-protection agreement. Use of public benchmarks
+would be governed by the consent and ethics approvals obtained by the
+original data providers.
+
+\subsection{Privacy and Scope of Inference}
+
+Sensitive personal data would be anonymised and encrypted. The system
+is not proposed as an automated diagnostic device. The consistency
+score is intended as an internal quantity: it would not be surfaced to
+users in raw form, and it would not be presented as a clinical finding.
+Anomaly flags would be directed exclusively to clinically trained
+reviewers. Bias monitoring and fairness evaluation across demographic
+groups are prerequisites for deployment, not optional extras.
+
+\subsection{Safety Escalation}
+\label{sec:safety}
+
+The interview includes a safety module, and the explicit feature vector
+contains a safety dimension. The system must therefore be designed on
+the assumption that suicidal ideation will be disclosed.
+
+Anomaly flags for \emph{asynchronous} clinical review are not a
+sufficient response to acute risk. We specify a separate, immediate
+pathway. If the safety module records a positive response, the
+screening flow halts, crisis-contact information and local emergency
+service numbers are displayed in-session, and the designated on-call
+clinician is notified according to a pre-agreed escalation protocol
+with a defined response window. The system does not provide emergency
+response itself and is not a crisis service; this must be stated to
+users before participation, during informed consent, and on every
+escalation screen.
+
+A deployed version handling disclosures of this kind would require
+clinical governance, an on-call rota, and documented follow-up, none of
+which is evaluated in this paper.
+
+\subsection{Transparency}
+
+Model behaviour, the reliability index, and the escalation rule are
+specified so that they can be audited. The heuristic status of the
+valence and arousal priors is disclosed (Section~\ref{sec:limitations}).
+
+% =====================================================================
+\section{Limitations}
+\label{sec:limitations}
+
+\emph{No empirical evaluation.} This paper reports no results. Every
+performance-related claim in the framework is a hypothesis, not a
+finding.
+
+\emph{No single multimodal corpus.} No public dataset contains text,
+speech, face, and behaviour under one protocol, so the joint system
+cannot be evaluated without new data collection.
+
+\emph{No raw video in DAIC-WOZ.} The publicly distributed DAIC-WOZ
+release provides audio and transcripts; it does not provide the raw
+facial video that the facial component would require. Facial modeling is
+therefore grounded in FER2013 and AffectNet rather than in interview
+data.
+
+\emph{Linear projection.} The map $\phi$ is linear and may fail to
+capture nonlinear cross-modal relationships.
+
+\emph{Heuristic affect weights.} $w_V$ and $w_A$ are hand-set priors,
+not estimated coefficients.
+
+\emph{Distress ambiguity.} $D = (1-V)|A|$ cannot separate calm from
+blunted affect; both yield $D \approx 0$.
+
+\emph{Population distribution.} The baseline would be estimated from a
+reference cohort, which makes $\mu$ and $\sigma$ unstable when that
+cohort is small. The $|Z| > 2$ threshold assumes an approximately
+Gaussian distribution and has not been clinically calibrated.
+
+\emph{Cross-cultural validity.} The affect priors derive from a
+predominantly Western annotation protocol and may not generalise.
+
+\emph{Conflicting evidence handling.} Prediction-level divergence
+detection is specified but not developed; conflict is captured only
+partially, in feature space.
+
+\emph{Environmental sensitivity.} Background noise and lighting would
+affect speech and facial extraction.
+
+\emph{Construct validity.} $C$ measures representational disagreement.
+Whether this corresponds to the clinical construct of masking is an
+open question that the proposed protocol can only partially address.
+
+\emph{Not a diagnostic device.} Any deployed version would be a
+screening aid and would not replace professional clinical assessment.
+
+% =====================================================================
+\section{Future Work}
+\label{sec:future}
+
+\begin{enumerate}
+  \item \textbf{Execute the evaluation protocol.} Run the study
+        specified in Section~\ref{sec:evaluation}, beginning with
+        Hypotheses H1--H3 on component-level data and proceeding to H4
+        once a joint multimodal cohort exists.
+  \item \textbf{Prediction-level divergence detection.} Implement
+        $D_{ET}$, $D_{EF}$, and $D_{TF}$ as formalised in
+        Section~\ref{sec:divergence}, localising conflict to specific
+        modality pairs.
+  \item \textbf{Nonlinear projection.} Replace the linear $\phi$ with a
+        shallow neural network and compare under identical splits.
+  \item \textbf{Learned affect weights.} Refit $w_V$ and $w_A$ by
+        regression against AffectNet dimensional annotations and
+        evaluate with the concordance correlation coefficient.
+  \item \textbf{Expressivity dynamics.} Validate session-level
+        $\sigma_V$ and $\sigma_A$ as discriminators of flat versus calm
+        affect.
+  \item \textbf{Personalised baselines.} Estimate the blend coefficient
+        $\kappa_i$ from longitudinal data and compare
+        between-subject against within-subject normalisation.
+  \item \textbf{Clinical calibration.} Calibrate the z-score threshold
+        and the gate threshold $\tau_C$ against PHQ-9~\cite{kroenke2001phq9}
+        and GAD-7~\cite{spitzer2006gad7} outcomes using ROC analysis.
+  \item \textbf{Uncertainty and attribution.} Add Bayesian uncertainty
+        estimation and SHAP-value attribution.
+  \item \textbf{Privacy-preserving deployment.} Explore federated
+        learning and on-device inference with clinical partners.
+\end{enumerate}
+
+% =====================================================================
+\section{Conclusion}
+
+This paper presented a conceptual framework for early mental health risk
+detection that treats explicit--implicit inconsistency and
+population-relative calibration as first-class concerns. The framework
+combines an eight-module FSM interview engine grouped into five thematic
+domains, a dual elicitation consistency model that quantifies
+disagreement between self-report and inferred behaviour, a dimensional
+facial component grounded in Russell's
+circumplex~\cite{russell1980circumplex} and
+AffectNet~\cite{mollahosseini2017affectnet}, and a z-score baseline
+layer that situates each session against a population distribution.
+
+The principal design argument is that the consistency score should be
+treated as a reliability signal rather than as an additive severity
+term. Discrepancy has no inherent clinical direction, an additive term
+double-counts the score when it also appears in the feature vector, and
+adding it where the estimate is least trustworthy inflates exactly the
+cases that should be treated with most caution. The framework therefore
+specifies a gated decision rule,
+\begin{equation}
+\text{escalate}(i) =
+\mathbb{1}\bigl[\,C_i > \tau_{C} \;\lor\; |Z_{R,i}| > 2
+\;\lor\; |Z_{L,i}| > 2 \;\lor\; \text{safety}_i = 1\,\bigr],
+\end{equation}
+with the reported output being the pair $\bigl(\hat{r}_i,
+\hat{\rho}(C_i)\bigr)$ and the escalation flag.
+
+No experimental results are reported. The contribution is a
+specification and a falsifiable evaluation plan, not evidence of
+superior performance. Whether the framework works---in particular,
+whether $C$ predicts error as the design assumes---remains an open
+empirical question, and Section~\ref{sec:evaluation} states the
+experiment that would answer it.
+
+% =====================================================================
+\bibliographystyle{ieeetr}
+\bibliography{references}
+
+\end{document}
